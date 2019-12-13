@@ -13,20 +13,41 @@
 > Draw, modify, and execute graphs using a simple python dict interface
 
 
-This file will become your README and also the index of your documentation.
+This is still under early development - not ready for general use.
 
 ## Install
 
 `pip install fastgraph`
 
-## How to use
+## drawgraph overview
 
-Fill me in please! Don't forget code examples:
+`drawgraph` is a simple wrapper over `pydot`, which patches some useful functionality directly into `pydot` classes, as well as adding some new functions.
+
+You can create a `pydot` `Cluster` from any list. If items are 2-tuples, then the first item is the label, the second is the tooltip. Otherwise, there will be no tooltips.
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
 ```python
-1+1
+lbls = 'conv','norm','act'
+```
+
+</div>
+
+</div>
+<div class="codecell" markdown="1">
+<div class="input_area" markdown="1">
+
+```python
+g = create_graph()
+sg1 = create_net_graph(g, 'cl1', lbls)
+sg2 = create_net_graph(g, 'cl2', lbls)
+# Connect a cluster to a cluster
+g.connect_items(sg1, sg2)
+# Connect a cluster to a node
+g.connect_items(sg1, sg2[-1])
+# Connect a node to a node
+g.connect_items(sg1[0], sg1[0])
+g
 ```
 
 </div>
@@ -35,7 +56,7 @@ Fill me in please! Don't forget code examples:
 
 
 
-    2
+![svg](output_6_0.svg)
 
 
 
