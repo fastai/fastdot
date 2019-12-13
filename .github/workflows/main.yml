@@ -12,7 +12,7 @@ jobs:
     - name: Install the library
       run: |
         sudo apt install -y graphviz
-        pip install nbdev jupyter
+        pip install nbdev jupyter fastcore
         pip install -e .
     - name: Read all notebooks
       run: |
