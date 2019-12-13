@@ -1,6 +1,7 @@
 {
-  "pagegraph": {
+  "fastgraph": {
     "Overview": "/",
-    "pagegraph.core": "/core"
+    "drawgraph": "/drawgraph",
+    "fastgraph.pagegraph": "/pagegraph"
   }
 }

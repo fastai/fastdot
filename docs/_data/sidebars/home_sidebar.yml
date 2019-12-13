@@ -10,9 +10,12 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: pagegraph.core
-      url: /core
+      title: drawgraph
+      url: /drawgraph
+    - output: web,pdf
+      title: fastgraph.pagegraph
+      url: /pagegraph
     output: web
-    title: pagegraph
+    title: fastgraph
   output: web
   title: Sidebar

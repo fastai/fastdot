@@ -1,7 +1,7 @@
-repository: fastai/pagegraph
+repository: fastai/fastgraph
 output: web
-topnav_title: pagegraph
-site_title: pagegraph
+topnav_title: fastgraph
+site_title: fastgraph
 company_name: fast.ai, inc
 description: Draw, modify, and execute graphs using a simple python dict interface
 # Set to false to disable KaTeX math
