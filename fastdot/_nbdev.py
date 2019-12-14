@@ -19,28 +19,10 @@ index = {"Dot": "00_drawgraph.ipynb",
          "pydot.Node.connect": "00_drawgraph.ipynb",
          "pydot.Graph.connect": "00_drawgraph.ipynb",
          "pydot.Graph.seq_edges": "00_drawgraph.ipynb",
-         "seq_cluster": "00_drawgraph.ipynb",
-         "draw_graph": "00_pagegraph.ipynb",
-         "split": "00_pagegraph.ipynb",
-         "make_dot_graph": "00_pagegraph.ipynb",
-         "to_dict": "00_pagegraph.ipynb",
-         "DotGraph": "00_pagegraph.ipynb",
-         "iter_nodes": "00_pagegraph.ipynb",
-         "map_": "00_pagegraph.ipynb",
-         "pfx": "00_pagegraph.ipynb",
-         "external_inputs": "00_pagegraph.ipynb",
-         "bindings": "00_pagegraph.ipynb",
-         "walk": "00_pagegraph.ipynb",
-         "to_graph": "00_pagegraph.ipynb",
-         "maybe_graph": "00_pagegraph.ipynb",
-         "explode": "00_pagegraph.ipynb",
-         "ColorMap": "00_pagegraph.ipynb",
-         "Network": "00_pagegraph.ipynb",
-         "to_network": "00_pagegraph.ipynb"}
+         "seq_cluster": "00_drawgraph.ipynb"}
 
-modules = ["drawgraph.py",
-           "pagegraph.py"]
+modules = ["drawgraph.py"]
 
-git_url = "https://github.com/fastai/fastgraph/tree/master/"
+git_url = "https://github.com/fastai/fastdot/tree/master/"
 
 def custom_doc_links(name): return None

@@ -8,7 +8,7 @@
 
 -->
 
-# fastgraph
+# fastdot
 
 > Draw, modify, and execute graphs using a simple python dict interface
 
@@ -17,7 +17,7 @@ This is still under early development - not ready for general use.
 
 ## Install
 
-`pip install fastgraph`
+`pip install fastdot`
 
 ## drawgraph overview
 

@@ -12,10 +12,7 @@ entries:
     - output: web,pdf
       title: drawgraph
       url: /drawgraph
-    - output: web,pdf
-      title: fastgraph.pagegraph
-      url: /pagegraph
     output: web
-    title: fastgraph
+    title: fastdot
   output: web
   title: Sidebar

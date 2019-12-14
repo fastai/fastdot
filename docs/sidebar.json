@@ -1,7 +1,6 @@
 {
-  "fastgraph": {
+  "fastdot": {
     "Overview": "/",
-    "drawgraph": "/drawgraph",
-    "fastgraph.pagegraph": "/pagegraph"
+    "drawgraph": "/drawgraph"
   }
 }
