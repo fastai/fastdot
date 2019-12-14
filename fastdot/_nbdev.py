@@ -2,26 +2,26 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"Dot": "00_drawgraph.ipynb",
-         "quote": "00_drawgraph.ipynb",
-         "node_defaults": "00_drawgraph.ipynb",
-         "Node": "00_drawgraph.ipynb",
-         "obj2node_color": "00_drawgraph.ipynb",
-         "graph_colors1": "00_drawgraph.ipynb",
-         "graph_colors2": "00_drawgraph.ipynb",
-         "Cluster": "00_drawgraph.ipynb",
-         "pydot.Graph.nodes": "00_drawgraph.ipynb",
-         "pydot.Graph.__getitem__": "00_drawgraph.ipynb",
-         "pydot.Graph.add_item": "00_drawgraph.ipynb",
-         "pydot.Graph.add_items": "00_drawgraph.ipynb",
-         "pydot.Graph.first": "00_drawgraph.ipynb",
-         "pydot.Graph.last": "00_drawgraph.ipynb",
-         "pydot.Node.connect": "00_drawgraph.ipynb",
-         "pydot.Graph.connect": "00_drawgraph.ipynb",
-         "pydot.Graph.seq_edges": "00_drawgraph.ipynb",
-         "seq_cluster": "00_drawgraph.ipynb"}
+index = {"Dot": "00_core.ipynb",
+         "quote": "00_core.ipynb",
+         "node_defaults": "00_core.ipynb",
+         "Node": "00_core.ipynb",
+         "obj2node_color": "00_core.ipynb",
+         "graph_colors1": "00_core.ipynb",
+         "graph_colors2": "00_core.ipynb",
+         "Cluster": "00_core.ipynb",
+         "pydot.Graph.nodes": "00_core.ipynb",
+         "pydot.Graph.__getitem__": "00_core.ipynb",
+         "pydot.Graph.add_item": "00_core.ipynb",
+         "pydot.Graph.add_items": "00_core.ipynb",
+         "pydot.Graph.first": "00_core.ipynb",
+         "pydot.Graph.last": "00_core.ipynb",
+         "pydot.Node.connect": "00_core.ipynb",
+         "pydot.Graph.connect": "00_core.ipynb",
+         "pydot.Graph.seq_edges": "00_core.ipynb",
+         "seq_cluster": "00_core.ipynb"}
 
-modules = ["drawgraph.py"]
+modules = ["core.py"]
 
 git_url = "https://github.com/fastai/fastdot/tree/master/"
 

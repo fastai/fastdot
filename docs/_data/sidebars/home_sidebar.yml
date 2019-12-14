@@ -10,8 +10,8 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: drawgraph
-      url: /drawgraph
+      title: fastdot.core
+      url: /core
     output: web
     title: fastdot
   output: web
