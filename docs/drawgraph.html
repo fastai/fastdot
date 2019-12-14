@@ -29,7 +29,7 @@ summary: "Drawing graphs with graphviz."
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Nodes-and-edges">Nodes and edges<a class="anchor-link" href="#Nodes-and-edges">&#182;</a></h2>
+<h2 id="Nodes">Nodes<a class="anchor-link" href="#Nodes">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -45,9 +45,9 @@ summary: "Drawing graphs with graphviz."
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="create_graph" class="doc_header"><code>create_graph</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>create_graph</code>(<strong><code>defaults</code></strong>=<em><code>None</code></em>, <strong><code>rankdir</code></strong>=<em><code>'LR'</code></em>, <strong><code>directed</code></strong>=<em><code>True</code></em>, <strong><code>compound</code></strong>=<em><code>True</code></em>, <strong><code>shape</code></strong>=<em><code>'box'</code></em>, <strong><code>style</code></strong>=<em><code>'rounded, filled'</code></em>, <strong><code>fillcolor</code></strong>=<em><code>'white'</code></em>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="Dot" class="doc_header"><code>Dot</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L13" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Dot</code>(<strong><code>defaults</code></strong>=<em><code>None</code></em>, <strong><code>rankdir</code></strong>=<em><code>'LR'</code></em>, <strong><code>directed</code></strong>=<em><code>True</code></em>, <strong><code>compound</code></strong>=<em><code>True</code></em>, <strong>**<code>kwargs</code></strong>)</p>
 </blockquote>
-<p>Create a <code>Dot</code> graph with fastai/fastgraph style defaults</p>
+<p>Create a <code>pydot.Dot</code> graph with fastai/fastgraph style defaults</p>
 
 </div>
 
@@ -69,7 +69,37 @@ summary: "Drawing graphs with graphviz."
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="Node" class="doc_header"><code>Node</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L23" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Node</code>(<strong><code>label</code></strong>, <strong><code>node</code></strong>=<em><code>None</code></em>, <strong><code>tooltip</code></strong>=<em><code>None</code></em>, <strong><code>name</code></strong>=<em><code>''</code></em>, <strong><code>obj_dict</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="quote" class="doc_header"><code>quote</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L20" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>quote</code>(<strong><code>x</code></strong>, <strong><code>q</code></strong>=<em><code>'"'</code></em>)</p>
+</blockquote>
+<p>Surround <code>x</code> with <code>"</code></p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="Node" class="doc_header"><code>Node</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L37" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Node</code>(<strong><code>label</code></strong>, <strong><code>tooltip</code></strong>=<em><code>None</code></em>, <strong>**<code>kwargs</code></strong>)</p>
 </blockquote>
 <p>Create a <code>pydot.Node</code> with a unique name</p>
 
@@ -93,7 +123,7 @@ summary: "Drawing graphs with graphviz."
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">create_graph</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">Dot</span><span class="p">()</span>
 <span class="n">g</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">Node</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">))</span>
 <span class="n">g</span>
 </pre></div>
@@ -120,9 +150,9 @@ summary: "Drawing graphs with graphviz."
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 40)">
 <title>G</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-40 58,-40 58,4 -4,4"/>
-<!-- n33b8813bc18d41989e1cf0e5f02144eb -->
+<!-- nf59a3841a34a44239ce08a3f40121116 -->
 <g id="node1" class="node">
-<title>n33b8813bc18d41989e1cf0e5f02144eb</title>
+<title>nf59a3841a34a44239ce08a3f40121116</title>
 <g id="a_node1"><a xlink:title="a">
 <path fill="#ffffff" stroke="#000000" d="M42,-36C42,-36 12,-36 12,-36 6,-36 0,-30 0,-24 0,-24 0,-12 0,-12 0,-6 6,0 12,0 12,0 42,0 42,0 48,0 54,-6 54,-12 54,-12 54,-24 54,-24 54,-30 48,-36 42,-36"/>
 <text text-anchor="middle" x="27" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">a</text>
@@ -142,7 +172,7 @@ summary: "Drawing graphs with graphviz."
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If a 2-tuple is passed to <code>add_node</code>, then the 2nd element becomes the tooltip.</p>
+<p>If a 2-tuple is passed to <code>add_node</code>, then the 2nd element becomes the tooltip. You can also pass any <code>kwargs</code> that are accepted by <code>graphviz</code>.</p>
 
 </div>
 </div>
@@ -152,8 +182,8 @@ summary: "Drawing graphs with graphviz."
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">create_graph</span><span class="p">()</span>
-<span class="n">g</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">Node</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s2">&quot;My tooltip&quot;</span><span class="p">]))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">Dot</span><span class="p">()</span>
+<span class="n">g</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">Node</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s2">&quot;My tooltip&quot;</span><span class="p">],</span> <span class="n">fillcolor</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">))</span>
 <span class="n">g</span>
 </pre></div>
 
@@ -179,11 +209,11 @@ summary: "Drawing graphs with graphviz."
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 40)">
 <title>G</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-40 58,-40 58,4 -4,4"/>
-<!-- n2afa2247adf24d0eae6a761c6c23953c -->
+<!-- nefec23b575494f92a53011bd99b42de1 -->
 <g id="node1" class="node">
-<title>n2afa2247adf24d0eae6a761c6c23953c</title>
+<title>nefec23b575494f92a53011bd99b42de1</title>
 <g id="a_node1"><a xlink:title="My tooltip">
-<path fill="#ffffff" stroke="#000000" d="M42,-36C42,-36 12,-36 12,-36 6,-36 0,-30 0,-24 0,-24 0,-12 0,-12 0,-6 6,0 12,0 12,0 42,0 42,0 48,0 54,-6 54,-12 54,-12 54,-24 54,-24 54,-30 48,-36 42,-36"/>
+<path fill="#ffc0cb" stroke="#000000" d="M42,-36C42,-36 12,-36 12,-36 6,-36 0,-30 0,-24 0,-24 0,-12 0,-12 0,-6 6,0 12,0 12,0 42,0 42,0 48,0 54,-6 54,-12 54,-12 54,-24 54,-24 54,-30 48,-36 42,-36"/>
 <text text-anchor="middle" x="27" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">a</text>
 </a>
 </g>
@@ -199,54 +229,9 @@ summary: "Drawing graphs with graphviz."
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="create_node" class="doc_header"><code>create_node</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L36" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>create_node</code>(<strong><code>label</code></strong>=<em><code>None</code></em>, <strong><code>node</code></strong>=<em><code>None</code></em>, <strong><code>name</code></strong>=<em><code>''</code></em>, <strong><code>obj_dict</code></strong>=<em><code>None</code></em>)</p>
-</blockquote>
-<p>Create a <a href="drawgraph.html#Node"><code>Node</code></a> and add to the <code>Graph</code></p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="Graph.create_node" class="doc_header"><code>Graph.create_node</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L36" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Graph.create_node</code>(<strong><code>label</code></strong>=<em><code>None</code></em>, <strong><code>node</code></strong>=<em><code>None</code></em>, <strong><code>name</code></strong>=<em><code>''</code></em>, <strong><code>obj_dict</code></strong>=<em><code>None</code></em>)</p>
-</blockquote>
-<p>Create a <a href="drawgraph.html#Node"><code>Node</code></a> and add to the <code>Graph</code></p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It's often easier to create a node and add to a graph in one step.</p>
+<p>Keyword args can also be arbitrary functions, which will called with the node's label.</p>
 
 </div>
 </div>
@@ -256,8 +241,8 @@ summary: "Drawing graphs with graphviz."
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">create_graph</span><span class="p">()</span>
-<span class="n">g</span><span class="o">.</span><span class="n">create_node</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">Dot</span><span class="p">()</span>
+<span class="n">g</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">Node</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">fillcolor</span><span class="o">=</span><span class="k">lambda</span> <span class="n">o</span><span class="p">:</span><span class="s1">&#39;pink&#39;</span><span class="p">))</span>
 <span class="n">g</span>
 </pre></div>
 
@@ -283,11 +268,11 @@ summary: "Drawing graphs with graphviz."
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 40)">
 <title>G</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-40 58,-40 58,4 -4,4"/>
-<!-- nfa4ed07a6c9c47fdbca23572b34e25cc -->
+<!-- n3a01f2c7ed7546d9a451b4a3cc90d683 -->
 <g id="node1" class="node">
-<title>nfa4ed07a6c9c47fdbca23572b34e25cc</title>
+<title>n3a01f2c7ed7546d9a451b4a3cc90d683</title>
 <g id="a_node1"><a xlink:title="a">
-<path fill="#ffffff" stroke="#000000" d="M42,-36C42,-36 12,-36 12,-36 6,-36 0,-30 0,-24 0,-24 0,-12 0,-12 0,-6 6,0 12,0 12,0 42,0 42,0 48,0 54,-6 54,-12 54,-12 54,-24 54,-24 54,-30 48,-36 42,-36"/>
+<path fill="#ffc0cb" stroke="#000000" d="M42,-36C42,-36 12,-36 12,-36 6,-36 0,-30 0,-24 0,-24 0,-12 0,-12 0,-6 6,0 12,0 12,0 42,0 42,0 48,0 54,-6 54,-12 54,-12 54,-24 54,-24 54,-30 48,-36 42,-36"/>
 <text text-anchor="middle" x="27" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">a</text>
 </a>
 </g>
@@ -303,6 +288,19 @@ summary: "Drawing graphs with graphviz."
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Colors">Colors<a class="anchor-link" href="#Colors">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The callable kwargs functionality can be used to map labels to colors in a consistent way..</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 
 </div>
@@ -315,21 +313,35 @@ summary: "Drawing graphs with graphviz."
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="Graph.create_edge" class="doc_header"><code>Graph.create_edge</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L45" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Graph.create_edge</code>(<strong><code>node1</code></strong>, <strong><code>node2</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="obj2node_color" class="doc_header"><code>obj2node_color</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L46" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>obj2node_color</code>(<strong><code>cm</code></strong>, <strong><code>minalpha</code></strong>, <strong><code>rangealpha</code></strong>, <strong><code>o</code></strong>)</p>
 </blockquote>
-<p>Create an <code>Edge</code> and add to the <code>Graph</code></p>
+<p>Create a consistent mapping from objects to colors, using colormap <code>cm</code></p>
 
 </div>
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">graph_colors1</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">obj2node_color</span><span class="p">,</span> <span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;gist_ncar&#39;</span><span class="p">),</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
+<span class="n">graph_colors2</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">obj2node_color</span><span class="p">,</span> <span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;Set3&#39;</span><span class="p">),</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">155</span><span class="p">)</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>With unique nodes, we can create edges directly between node objects.</p>
+<p>These predefined color mapping functions provide a good range of colors and readable text.</p>
 
 </div>
 </div>
@@ -339,8 +351,9 @@ summary: "Drawing graphs with graphviz."
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">create_graph</span><span class="p">()</span>
-<span class="n">g</span><span class="o">.</span><span class="n">create_edge</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">create_node</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">),</span> <span class="n">g</span><span class="o">.</span><span class="n">create_node</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">Dot</span><span class="p">()</span>
+<span class="n">g</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">Node</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">fillcolor</span><span class="o">=</span><span class="n">graph_colors1</span><span class="p">))</span>
+<span class="n">g</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">Node</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">fillcolor</span><span class="o">=</span><span class="n">graph_colors1</span><span class="p">))</span>
 <span class="n">g</span>
 </pre></div>
 
@@ -361,34 +374,28 @@ summary: "Drawing graphs with graphviz."
 <!-- Generated by graphviz version 2.40.1 (20161225.0304)
  -->
 <!-- Title: G Pages: 1 -->
-<svg width="152pt" height="44pt"
- viewBox="0.00 0.00 152.00 44.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 40)">
+<svg width="62pt" height="98pt"
+ viewBox="0.00 0.00 62.00 98.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 94)">
 <title>G</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-40 148,-40 148,4 -4,4"/>
-<!-- n8890bd4588b84ac9b4f5a36649675600 -->
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-94 58,-94 58,4 -4,4"/>
+<!-- nb4b1d66b75244928ad2d01cba6c89bc2 -->
 <g id="node1" class="node">
-<title>n8890bd4588b84ac9b4f5a36649675600</title>
+<title>nb4b1d66b75244928ad2d01cba6c89bc2</title>
 <g id="a_node1"><a xlink:title="a">
-<path fill="#ffffff" stroke="#000000" d="M42,-36C42,-36 12,-36 12,-36 6,-36 0,-30 0,-24 0,-24 0,-12 0,-12 0,-6 6,0 12,0 12,0 42,0 42,0 48,0 54,-6 54,-12 54,-12 54,-24 54,-24 54,-30 48,-36 42,-36"/>
+<path fill="#ffc40a" fill-opacity="0.486275" stroke="#000000" d="M42,-36C42,-36 12,-36 12,-36 6,-36 0,-30 0,-24 0,-24 0,-12 0,-12 0,-6 6,0 12,0 12,0 42,0 42,0 48,0 54,-6 54,-12 54,-12 54,-24 54,-24 54,-30 48,-36 42,-36"/>
 <text text-anchor="middle" x="27" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">a</text>
 </a>
 </g>
 </g>
-<!-- n9793789865db47f4b0a3e1bf6976fa02 -->
+<!-- nb3df508c4bfd49f58b29fc20f19ba505 -->
 <g id="node2" class="node">
-<title>n9793789865db47f4b0a3e1bf6976fa02</title>
+<title>nb3df508c4bfd49f58b29fc20f19ba505</title>
 <g id="a_node2"><a xlink:title="b">
-<path fill="#ffffff" stroke="#000000" d="M132,-36C132,-36 102,-36 102,-36 96,-36 90,-30 90,-24 90,-24 90,-12 90,-12 90,-6 96,0 102,0 102,0 132,0 132,0 138,0 144,-6 144,-12 144,-12 144,-24 144,-24 144,-30 138,-36 132,-36"/>
-<text text-anchor="middle" x="117" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">b</text>
+<path fill="#00580f" fill-opacity="0.364706" stroke="#000000" d="M42,-90C42,-90 12,-90 12,-90 6,-90 0,-84 0,-78 0,-78 0,-66 0,-66 0,-60 6,-54 12,-54 12,-54 42,-54 42,-54 48,-54 54,-60 54,-66 54,-66 54,-78 54,-78 54,-84 48,-90 42,-90"/>
+<text text-anchor="middle" x="27" y="-68.3" font-family="Times,serif" font-size="14.00" fill="#000000">b</text>
 </a>
 </g>
-</g>
-<!-- n8890bd4588b84ac9b4f5a36649675600&#45;&gt;n9793789865db47f4b0a3e1bf6976fa02 -->
-<g id="edge1" class="edge">
-<title>n8890bd4588b84ac9b4f5a36649675600&#45;&gt;n9793789865db47f4b0a3e1bf6976fa02</title>
-<path fill="none" stroke="#000000" d="M54.003,-18C62.0277,-18 70.9665,-18 79.5309,-18"/>
-<polygon fill="#000000" stroke="#000000" points="79.7051,-21.5001 89.705,-18 79.705,-14.5001 79.7051,-21.5001"/>
 </g>
 </g>
 </svg>
@@ -402,109 +409,13 @@ summary: "Drawing graphs with graphviz."
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="show_colormap" class="doc_header"><code>show_colormap</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L59" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>show_colormap</code>(<strong><code>cm</code></strong>, <strong><code>figsize</code></strong>=<em><code>(8, 0.5)</code></em>)</p>
-</blockquote>
-<p>Utility function to display a matplotlib colormap</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The default colors provided by <a href="drawgraph.html"><code>drawgraph</code></a> are (along with white, which is <code>net_colors[0]</code>):</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcwAAAApCAYAAAC4JRkDAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4xLjEsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy8QZhcZAAABOUlEQVR4nO3bIU5DQRiFUV4hAYEgbIKkqSHoLoBloHFokFio7A5IWEBNRV3DArAokCQY/LCAeWmu+0tyjpwx130ZMUNr7QAA2G1SPQAA/gPBBICAYAJAQDABICCYABAQTAAIHO26fHp/27s/J3ez7+oJnc36onrCqPl2WT2h83h5Uz2h83D4XD2hs5oeV08Ydf1zXz2h83H6Wz2h8/nyVT2hc3Z7Uj1h1NXktXpC73wxjB17YQJAQDABICCYABAQTAAICCYABAQTAAKCCQABwQSAgGACQEAwASAgmAAQEEwACAgmAAQEEwACggkAAcEEgIBgAkBAMAEgIJgAEBBMAAgIJgAEBBMAAoIJAAHBBICAYAJAQDABIDC01qo3AMDe88IEgIBgAkBAMAEgIJgAEBBMAAgIJgAE/gCVaRlNQVHsxAAAAABJRU5ErkJggg==
-"
->
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="Graph.create_nodes" class="doc_header"><code>Graph.create_nodes</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L67" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Graph.create_nodes</code>(<strong><code>labels</code></strong>, <strong><code>colors</code></strong>=<em><code>None</code></em>, <strong>**<code>kwargs</code></strong>)</p>
-</blockquote>
-<p>Create nodes for <code>labels</code> with optional <code>tooltips</code> and <code>colors</code>, and add to this <code>Graph</code></p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lbls</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">conv</span><span class="o">=</span><span class="s1">&#39;A conv&#39;</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s1">&#39;Some norm&#39;</span><span class="p">,</span> <span class="n">act</span><span class="o">=</span><span class="s1">&#39;Activation&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">create_graph</span><span class="p">()</span>
-<span class="n">ga</span><span class="p">,</span><span class="n">gb</span><span class="p">,</span><span class="n">gc</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">create_nodes</span><span class="p">(</span><span class="n">lbls</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="n">net_colors</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
-<span class="n">g</span><span class="o">.</span><span class="n">create_edge</span><span class="p">(</span><span class="n">ga</span><span class="p">,</span> <span class="n">gb</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">create_edge</span><span class="p">(</span><span class="n">gb</span><span class="p">,</span> <span class="n">gc</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">Dot</span><span class="p">()</span>
+<span class="n">g</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">Node</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">fillcolor</span><span class="o">=</span><span class="n">graph_colors2</span><span class="p">))</span>
+<span class="n">g</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">Node</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">fillcolor</span><span class="o">=</span><span class="n">graph_colors2</span><span class="p">))</span>
 <span class="n">g</span>
 </pre></div>
 
@@ -525,49 +436,28 @@ summary: "Drawing graphs with graphviz."
 <!-- Generated by graphviz version 2.40.1 (20161225.0304)
  -->
 <!-- Title: G Pages: 1 -->
-<svg width="242pt" height="44pt"
- viewBox="0.00 0.00 242.00 44.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 40)">
+<svg width="62pt" height="98pt"
+ viewBox="0.00 0.00 62.00 98.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 94)">
 <title>G</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-40 238,-40 238,4 -4,4"/>
-<!-- nd7bcf11bc032404db3daa494d92f8bdf -->
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-94 58,-94 58,4 -4,4"/>
+<!-- ne30f31058d4b4beab9bc27248657dde3 -->
 <g id="node1" class="node">
-<title>nd7bcf11bc032404db3daa494d92f8bdf</title>
-<g id="a_node1"><a xlink:title="A conv">
-<path fill="#ffffff" stroke="#000000" d="M42,-36C42,-36 12,-36 12,-36 6,-36 0,-30 0,-24 0,-24 0,-12 0,-12 0,-6 6,0 12,0 12,0 42,0 42,0 48,0 54,-6 54,-12 54,-12 54,-24 54,-24 54,-30 48,-36 42,-36"/>
-<text text-anchor="middle" x="27" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">conv</text>
+<title>ne30f31058d4b4beab9bc27248657dde3</title>
+<g id="a_node1"><a xlink:title="a">
+<path fill="#fccde5" fill-opacity="0.721569" stroke="#000000" d="M42,-36C42,-36 12,-36 12,-36 6,-36 0,-30 0,-24 0,-24 0,-12 0,-12 0,-6 6,0 12,0 12,0 42,0 42,0 48,0 54,-6 54,-12 54,-12 54,-24 54,-24 54,-30 48,-36 42,-36"/>
+<text text-anchor="middle" x="27" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">a</text>
 </a>
 </g>
 </g>
-<!-- n3ba411e8c21d49b2b3631cbf951d9ca0 -->
+<!-- nc19f9c7f3dd64e2c9cb65970a8802fd0 -->
 <g id="node2" class="node">
-<title>n3ba411e8c21d49b2b3631cbf951d9ca0</title>
-<g id="a_node2"><a xlink:title="Some norm">
-<path fill="#8dd3c7" stroke="#000000" d="M132,-36C132,-36 102,-36 102,-36 96,-36 90,-30 90,-24 90,-24 90,-12 90,-12 90,-6 96,0 102,0 102,0 132,0 132,0 138,0 144,-6 144,-12 144,-12 144,-24 144,-24 144,-30 138,-36 132,-36"/>
-<text text-anchor="middle" x="117" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">norm</text>
+<title>nc19f9c7f3dd64e2c9cb65970a8802fd0</title>
+<g id="a_node2"><a xlink:title="b">
+<path fill="#8dd3c7" fill-opacity="0.580392" stroke="#000000" d="M42,-90C42,-90 12,-90 12,-90 6,-90 0,-84 0,-78 0,-78 0,-66 0,-66 0,-60 6,-54 12,-54 12,-54 42,-54 42,-54 48,-54 54,-60 54,-66 54,-66 54,-78 54,-78 54,-84 48,-90 42,-90"/>
+<text text-anchor="middle" x="27" y="-68.3" font-family="Times,serif" font-size="14.00" fill="#000000">b</text>
 </a>
 </g>
-</g>
-<!-- nd7bcf11bc032404db3daa494d92f8bdf&#45;&gt;n3ba411e8c21d49b2b3631cbf951d9ca0 -->
-<g id="edge1" class="edge">
-<title>nd7bcf11bc032404db3daa494d92f8bdf&#45;&gt;n3ba411e8c21d49b2b3631cbf951d9ca0</title>
-<path fill="none" stroke="#000000" d="M54.003,-18C62.0277,-18 70.9665,-18 79.5309,-18"/>
-<polygon fill="#000000" stroke="#000000" points="79.7051,-21.5001 89.705,-18 79.705,-14.5001 79.7051,-21.5001"/>
-</g>
-<!-- n60a1211f39d340f7b25d7159894ce7f1 -->
-<g id="node3" class="node">
-<title>n60a1211f39d340f7b25d7159894ce7f1</title>
-<g id="a_node3"><a xlink:title="Activation">
-<path fill="#ffffb3" stroke="#000000" d="M222,-36C222,-36 192,-36 192,-36 186,-36 180,-30 180,-24 180,-24 180,-12 180,-12 180,-6 186,0 192,0 192,0 222,0 222,0 228,0 234,-6 234,-12 234,-12 234,-24 234,-24 234,-30 228,-36 222,-36"/>
-<text text-anchor="middle" x="207" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">act</text>
-</a>
-</g>
-</g>
-<!-- n3ba411e8c21d49b2b3631cbf951d9ca0&#45;&gt;n60a1211f39d340f7b25d7159894ce7f1 -->
-<g id="edge2" class="edge">
-<title>n3ba411e8c21d49b2b3631cbf951d9ca0&#45;&gt;n60a1211f39d340f7b25d7159894ce7f1</title>
-<path fill="none" stroke="#000000" d="M144.003,-18C152.0277,-18 160.9665,-18 169.5309,-18"/>
-<polygon fill="#000000" stroke="#000000" points="169.7051,-21.5001 179.705,-18 169.705,-14.5001 169.7051,-21.5001"/>
 </g>
 </g>
 </svg>
@@ -579,6 +469,22 @@ summary: "Drawing graphs with graphviz."
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We'll use the former color function as our default. You can change it by simply modifying <a href="drawgraph.html#node_defaults"><code>node_defaults</code></a>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Clusters-and-Items">Clusters and Items<a class="anchor-link" href="#Clusters-and-Items">&#182;</a></h2>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 
@@ -592,9 +498,9 @@ summary: "Drawing graphs with graphviz."
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="Graph.add_edges_seq" class="doc_header"><code>Graph.add_edges_seq</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L74" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Graph.add_edges_seq</code>(<strong><code>nodes</code></strong>)</p>
+<h4 id="Cluster" class="doc_header"><code>Cluster</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L61" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Cluster</code>(<strong><code>label</code></strong>=<em><code>''</code></em>, <strong><code>tooltip</code></strong>=<em><code>None</code></em>, <strong><code>style</code></strong>=<em><code>'rounded, filled'</code></em>, <strong><code>fillcolor</code></strong>=<em><code>'#55555522'</code></em>, <strong>**<code>kwargs</code></strong>)</p>
 </blockquote>
-<p>Add edges between each pair of <code>nodes</code> in sequence</p>
+<p>Create a <code>pydot.Cluster</code> with a unique name</p>
 
 </div>
 
@@ -603,22 +509,17 @@ summary: "Drawing graphs with graphviz."
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Here's a quicker way to create the previous graph (colors from <a href="drawgraph.html#net_colors"><code>net_colors</code></a> are used automatically if <code>colors</code> not provided):</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">create_graph</span><span class="p">()</span>
-<span class="n">nodes</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">create_nodes</span><span class="p">(</span><span class="n">lbls</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">add_edges_seq</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">Dot</span><span class="p">()</span>
+<span class="n">sg</span> <span class="o">=</span> <span class="n">Cluster</span><span class="p">(</span><span class="s1">&#39;clus&#39;</span><span class="p">,</span> <span class="n">tooltip</span><span class="o">=</span><span class="s1">&#39;Cluster tooltip&#39;</span><span class="p">)</span>
+<span class="n">sg</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">Node</span><span class="p">([</span><span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="s2">&quot;My tooltip&quot;</span><span class="p">]))</span>
+<span class="n">sg</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">Node</span><span class="p">(</span><span class="s1">&#39;n2&#39;</span><span class="p">))</span>
+<span class="n">g</span><span class="o">.</span><span class="n">add_subgraph</span><span class="p">(</span><span class="n">sg</span><span class="p">)</span>
 <span class="n">g</span>
 </pre></div>
 
@@ -639,49 +540,36 @@ summary: "Drawing graphs with graphviz."
 <!-- Generated by graphviz version 2.40.1 (20161225.0304)
  -->
 <!-- Title: G Pages: 1 -->
-<svg width="242pt" height="44pt"
- viewBox="0.00 0.00 242.00 44.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 40)">
+<svg width="94pt" height="153pt"
+ viewBox="0.00 0.00 94.00 153.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 149)">
 <title>G</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-40 238,-40 238,4 -4,4"/>
-<!-- n67d3f333a25b4140a40c69e6cb88072c -->
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-149 90,-149 90,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_n07b7ec7dbdf84e9b84addb938ecf9cbc</title>
+<g id="a_clust1"><a xlink:title="Cluster tooltip">
+<path fill="#555555" fill-opacity="0.133333" stroke="#000000" d="M20,-8C20,-8 66,-8 66,-8 72,-8 78,-14 78,-20 78,-20 78,-125 78,-125 78,-131 72,-137 66,-137 66,-137 20,-137 20,-137 14,-137 8,-131 8,-125 8,-125 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="43" y="-121.8" font-family="Times,serif" font-size="14.00" fill="#000000">clus</text>
+</a>
+</g>
+</g>
+<!-- n2fa2d503deef4382b53281098915f561 -->
 <g id="node1" class="node">
-<title>n67d3f333a25b4140a40c69e6cb88072c</title>
-<g id="a_node1"><a xlink:title="A conv">
-<path fill="#ffffff" stroke="#000000" d="M42,-36C42,-36 12,-36 12,-36 6,-36 0,-30 0,-24 0,-24 0,-12 0,-12 0,-6 6,0 12,0 12,0 42,0 42,0 48,0 54,-6 54,-12 54,-12 54,-24 54,-24 54,-30 48,-36 42,-36"/>
-<text text-anchor="middle" x="27" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">conv</text>
+<title>n2fa2d503deef4382b53281098915f561</title>
+<g id="a_node1"><a xlink:title="My tooltip">
+<path fill="#00fa88" fill-opacity="0.329412" stroke="#000000" d="M58,-106C58,-106 28,-106 28,-106 22,-106 16,-100 16,-94 16,-94 16,-82 16,-82 16,-76 22,-70 28,-70 28,-70 58,-70 58,-70 64,-70 70,-76 70,-82 70,-82 70,-94 70,-94 70,-100 64,-106 58,-106"/>
+<text text-anchor="middle" x="43" y="-84.3" font-family="Times,serif" font-size="14.00" fill="#000000">n</text>
 </a>
 </g>
 </g>
-<!-- n1f50ed60372f425d8cc9e390d327b292 -->
+<!-- nffb7b92421e84ec49409bc8cacb684f3 -->
 <g id="node2" class="node">
-<title>n1f50ed60372f425d8cc9e390d327b292</title>
-<g id="a_node2"><a xlink:title="Some norm">
-<path fill="#8dd3c7" stroke="#000000" d="M132,-36C132,-36 102,-36 102,-36 96,-36 90,-30 90,-24 90,-24 90,-12 90,-12 90,-6 96,0 102,0 102,0 132,0 132,0 138,0 144,-6 144,-12 144,-12 144,-24 144,-24 144,-30 138,-36 132,-36"/>
-<text text-anchor="middle" x="117" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">norm</text>
+<title>nffb7b92421e84ec49409bc8cacb684f3</title>
+<g id="a_node2"><a xlink:title="n2">
+<path fill="#f803fc" fill-opacity="0.352941" stroke="#000000" d="M58,-52C58,-52 28,-52 28,-52 22,-52 16,-46 16,-40 16,-40 16,-28 16,-28 16,-22 22,-16 28,-16 28,-16 58,-16 58,-16 64,-16 70,-22 70,-28 70,-28 70,-40 70,-40 70,-46 64,-52 58,-52"/>
+<text text-anchor="middle" x="43" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#000000">n2</text>
 </a>
 </g>
-</g>
-<!-- n67d3f333a25b4140a40c69e6cb88072c&#45;&gt;n1f50ed60372f425d8cc9e390d327b292 -->
-<g id="edge1" class="edge">
-<title>n67d3f333a25b4140a40c69e6cb88072c&#45;&gt;n1f50ed60372f425d8cc9e390d327b292</title>
-<path fill="none" stroke="#000000" d="M54.003,-18C62.0277,-18 70.9665,-18 79.5309,-18"/>
-<polygon fill="#000000" stroke="#000000" points="79.7051,-21.5001 89.705,-18 79.705,-14.5001 79.7051,-21.5001"/>
-</g>
-<!-- n08132b02e16745bc9f76dab7d9baaece -->
-<g id="node3" class="node">
-<title>n08132b02e16745bc9f76dab7d9baaece</title>
-<g id="a_node3"><a xlink:title="Activation">
-<path fill="#ffffb3" stroke="#000000" d="M222,-36C222,-36 192,-36 192,-36 186,-36 180,-30 180,-24 180,-24 180,-12 180,-12 180,-6 186,0 192,0 192,0 222,0 222,0 228,0 234,-6 234,-12 234,-12 234,-24 234,-24 234,-30 228,-36 222,-36"/>
-<text text-anchor="middle" x="207" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">act</text>
-</a>
-</g>
-</g>
-<!-- n1f50ed60372f425d8cc9e390d327b292&#45;&gt;n08132b02e16745bc9f76dab7d9baaece -->
-<g id="edge2" class="edge">
-<title>n1f50ed60372f425d8cc9e390d327b292&#45;&gt;n08132b02e16745bc9f76dab7d9baaece</title>
-<path fill="none" stroke="#000000" d="M144.003,-18C152.0277,-18 160.9665,-18 169.5309,-18"/>
-<polygon fill="#000000" stroke="#000000" points="169.7051,-21.5001 179.705,-18 169.705,-14.5001 169.7051,-21.5001"/>
 </g>
 </g>
 </svg>
@@ -694,107 +582,128 @@ summary: "Drawing graphs with graphviz."
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="Graph.nodes" class="doc_header"><code>Graph.nodes</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L67" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Graph.nodes</code>()</p>
+</blockquote>
+<p><code>i</code>th node in <code>Graph</code></p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="Graph.__getitem__" class="doc_header"><code>Graph.__getitem__</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L73" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Graph.__getitem__</code>(<strong><code>i</code></strong>)</p>
+</blockquote>
+<p><code>i</code>th node in <code>Graph</code></p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Clusters">Clusters<a class="anchor-link" href="#Clusters">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="Cluster" class="doc_header"><code>Cluster</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L80" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Cluster</code>(<strong><code>label</code></strong>=<em><code>''</code></em>, <strong><code>graph_name</code></strong>=<em><code>'subG'</code></em>, <strong><code>obj_dict</code></strong>=<em><code>None</code></em>, <strong><code>suppress_disconnected</code></strong>=<em><code>False</code></em>, <strong><code>simplify</code></strong>=<em><code>False</code></em>)</p>
-</blockquote>
-
-</div>
-
-</div>
+<p>You can subscript into a <code>Graph</code>'s <a href="drawgraph.html#Node"><code>Node</code></a>s by index:</p>
 
 </div>
 </div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="Graph.create_subgraph" class="doc_header"><code>Graph.create_subgraph</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L84" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Graph.create_subgraph</code>(<strong><code>sg</code></strong>)</p>
-</blockquote>
-<p>Same as <code>Graph.add_subgraph</code>, but also returns the subgraph</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="Cluster.__getitem__" class="doc_header"><code>Cluster.__getitem__</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L98" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Cluster.__getitem__</code>(<strong><code>i</code></strong>)</p>
-</blockquote>
-<p><code>i</code>th node in <a href="drawgraph.html#Cluster"><code>Cluster</code></a></p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="Graph.create_cluster" class="doc_header"><code>Graph.create_cluster</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L90" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Graph.create_cluster</code>(<strong><code>label</code></strong>, <strong><code>tooltip</code></strong>=<em><code>None</code></em>, <strong><code>style</code></strong>=<em><code>'rounded, filled'</code></em>, <strong><code>fillcolor</code></strong>=<em><code>'#77777744'</code></em>, <strong>**<code>kwargs</code></strong>)</p>
-</blockquote>
-<p>Create a <a href="drawgraph.html#Cluster"><code>Cluster</code></a> and add it to the <code>Graph</code></p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">create_graph</span><span class="p">()</span>
-<span class="n">sg</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">create_cluster</span><span class="p">(</span><span class="s1">&#39;cl1&#39;</span><span class="p">)</span>
-<span class="n">nodes</span> <span class="o">=</span> <span class="n">sg</span><span class="o">.</span><span class="n">create_nodes</span><span class="p">(</span><span class="n">lbls</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">add_edges_seq</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">sg</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_label</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&#34;n&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="Graph.add_item" class="doc_header"><code>Graph.add_item</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L79" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Graph.add_item</code>(<strong><code>item</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+</blockquote>
+<p>Add a <a href="drawgraph.html#Cluster"><code>Cluster</code></a>, <a href="drawgraph.html#Node"><code>Node</code></a>, or <code>Edge</code> to the <code>Graph</code></p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There's no good reason to have different methods for adding clusters vs nodes, so we provide a single method.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">Dot</span><span class="p">()</span>
+<span class="n">sg</span> <span class="o">=</span> <span class="n">Cluster</span><span class="p">(</span><span class="s1">&#39;clus&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="n">sg</span><span class="p">)</span>
+<span class="n">sg</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="s1">&#39;n&#39;</span><span class="p">)</span>
 <span class="n">g</span>
 </pre></div>
 
@@ -815,57 +724,27 @@ summary: "Drawing graphs with graphviz."
 <!-- Generated by graphviz version 2.40.1 (20161225.0304)
  -->
 <!-- Title: G Pages: 1 -->
-<svg width="274pt" height="99pt"
- viewBox="0.00 0.00 274.00 99.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="94pt" height="99pt"
+ viewBox="0.00 0.00 94.00 99.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 95)">
 <title>G</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-95 270,-95 270,4 -4,4"/>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-95 90,-95 90,4 -4,4"/>
 <g id="clust1" class="cluster">
-<title>cluster_ne1cb2d2e70b044bc9b2d0d3087b3d1c7</title>
-<g id="a_clust1"><a xlink:title="cl1">
-<path fill="#777777" fill-opacity="0.266667" stroke="#000000" d="M20,-8C20,-8 246,-8 246,-8 252,-8 258,-14 258,-20 258,-20 258,-71 258,-71 258,-77 252,-83 246,-83 246,-83 20,-83 20,-83 14,-83 8,-77 8,-71 8,-71 8,-20 8,-20 8,-14 14,-8 20,-8"/>
-<text text-anchor="middle" x="133" y="-67.8" font-family="Times,serif" font-size="14.00" fill="#000000">cl1</text>
+<title>cluster_nf425994e54b74defb48121ac645f7ad8</title>
+<g id="a_clust1"><a xlink:title="clus">
+<path fill="#555555" fill-opacity="0.133333" stroke="#000000" d="M20,-8C20,-8 66,-8 66,-8 72,-8 78,-14 78,-20 78,-20 78,-71 78,-71 78,-77 72,-83 66,-83 66,-83 20,-83 20,-83 14,-83 8,-77 8,-71 8,-71 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="43" y="-67.8" font-family="Times,serif" font-size="14.00" fill="#000000">clus</text>
 </a>
 </g>
 </g>
-<!-- n813d1c64062f49a8bb3dfc920445f2e0 -->
+<!-- n4cd485585c204a5b87defeb37a4cb9e3 -->
 <g id="node1" class="node">
-<title>n813d1c64062f49a8bb3dfc920445f2e0</title>
-<g id="a_node1"><a xlink:title="A conv">
-<path fill="#ffffff" stroke="#000000" d="M58,-52C58,-52 28,-52 28,-52 22,-52 16,-46 16,-40 16,-40 16,-28 16,-28 16,-22 22,-16 28,-16 28,-16 58,-16 58,-16 64,-16 70,-22 70,-28 70,-28 70,-40 70,-40 70,-46 64,-52 58,-52"/>
-<text text-anchor="middle" x="43" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#000000">conv</text>
+<title>n4cd485585c204a5b87defeb37a4cb9e3</title>
+<g id="a_node1"><a xlink:title="n">
+<path fill="#00fa88" fill-opacity="0.329412" stroke="#000000" d="M58,-52C58,-52 28,-52 28,-52 22,-52 16,-46 16,-40 16,-40 16,-28 16,-28 16,-22 22,-16 28,-16 28,-16 58,-16 58,-16 64,-16 70,-22 70,-28 70,-28 70,-40 70,-40 70,-46 64,-52 58,-52"/>
+<text text-anchor="middle" x="43" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#000000">n</text>
 </a>
 </g>
-</g>
-<!-- n2b97416516d04c7f8073c7b3a1268ba6 -->
-<g id="node2" class="node">
-<title>n2b97416516d04c7f8073c7b3a1268ba6</title>
-<g id="a_node2"><a xlink:title="Some norm">
-<path fill="#8dd3c7" stroke="#000000" d="M148,-52C148,-52 118,-52 118,-52 112,-52 106,-46 106,-40 106,-40 106,-28 106,-28 106,-22 112,-16 118,-16 118,-16 148,-16 148,-16 154,-16 160,-22 160,-28 160,-28 160,-40 160,-40 160,-46 154,-52 148,-52"/>
-<text text-anchor="middle" x="133" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#000000">norm</text>
-</a>
-</g>
-</g>
-<!-- n813d1c64062f49a8bb3dfc920445f2e0&#45;&gt;n2b97416516d04c7f8073c7b3a1268ba6 -->
-<g id="edge1" class="edge">
-<title>n813d1c64062f49a8bb3dfc920445f2e0&#45;&gt;n2b97416516d04c7f8073c7b3a1268ba6</title>
-<path fill="none" stroke="#000000" d="M70.003,-34C78.0277,-34 86.9665,-34 95.5309,-34"/>
-<polygon fill="#000000" stroke="#000000" points="95.7051,-37.5001 105.705,-34 95.705,-30.5001 95.7051,-37.5001"/>
-</g>
-<!-- nb7ad8807d44f4812b0e0ae593115c2bc -->
-<g id="node3" class="node">
-<title>nb7ad8807d44f4812b0e0ae593115c2bc</title>
-<g id="a_node3"><a xlink:title="Activation">
-<path fill="#ffffb3" stroke="#000000" d="M238,-52C238,-52 208,-52 208,-52 202,-52 196,-46 196,-40 196,-40 196,-28 196,-28 196,-22 202,-16 208,-16 208,-16 238,-16 238,-16 244,-16 250,-22 250,-28 250,-28 250,-40 250,-40 250,-46 244,-52 238,-52"/>
-<text text-anchor="middle" x="223" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#000000">act</text>
-</a>
-</g>
-</g>
-<!-- n2b97416516d04c7f8073c7b3a1268ba6&#45;&gt;nb7ad8807d44f4812b0e0ae593115c2bc -->
-<g id="edge2" class="edge">
-<title>n2b97416516d04c7f8073c7b3a1268ba6&#45;&gt;nb7ad8807d44f4812b0e0ae593115c2bc</title>
-<path fill="none" stroke="#000000" d="M160.003,-34C168.0277,-34 176.9665,-34 185.5309,-34"/>
-<polygon fill="#000000" stroke="#000000" points="185.7051,-37.5001 195.705,-34 185.705,-30.5001 185.7051,-37.5001"/>
 </g>
 </g>
 </svg>
@@ -890,9 +769,9 @@ summary: "Drawing graphs with graphviz."
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="create_net_graph" class="doc_header"><code>create_net_graph</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L104" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>create_net_graph</code>(<strong><code>g</code></strong>, <strong><code>cluster_label</code></strong>, <strong><code>labels</code></strong>, <strong><code>colors</code></strong>=<em><code>None</code></em>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="Graph.add_items" class="doc_header"><code>Graph.add_items</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L90" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Graph.add_items</code>(<strong>*<code>items</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
 </blockquote>
-<p>Create a <a href="drawgraph.html#Cluster"><code>Cluster</code></a> with <code>label</code> containing <code>nodes</code></p>
+<p>Add <code>items</code> the <code>Graph</code></p>
 
 </div>
 
@@ -901,21 +780,16 @@ summary: "Drawing graphs with graphviz."
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This is just a shortcut for doing all the steps in the previous example.</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">create_graph</span><span class="p">()</span>
-<span class="n">sg</span> <span class="o">=</span> <span class="n">create_net_graph</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="s1">&#39;cl1&#39;</span><span class="p">,</span> <span class="n">lbls</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sg</span> <span class="o">=</span> <span class="n">Cluster</span><span class="p">(</span><span class="s1">&#39;clus&#39;</span><span class="p">)</span>
+<span class="n">sg</span><span class="o">.</span><span class="n">add_items</span><span class="p">(</span><span class="s1">&#39;n1&#39;</span><span class="p">,</span> <span class="s1">&#39;n2&#39;</span><span class="p">)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">Dot</span><span class="p">()</span>
+<span class="n">g</span><span class="o">.</span><span class="n">add_items</span><span class="p">(</span><span class="n">sg</span><span class="p">,</span> <span class="s1">&#39;n3&#39;</span><span class="p">)</span>
 <span class="n">g</span>
 </pre></div>
 
@@ -936,60 +810,78 @@ summary: "Drawing graphs with graphviz."
 <!-- Generated by graphviz version 2.40.1 (20161225.0304)
  -->
 <!-- Title: G Pages: 1 -->
-<svg width="274pt" height="99pt"
- viewBox="0.00 0.00 274.00 99.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 95)">
+<svg width="94pt" height="189pt"
+ viewBox="0.00 0.00 94.00 189.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 185)">
 <title>G</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-95 270,-95 270,4 -4,4"/>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-185 90,-185 90,4 -4,4"/>
 <g id="clust1" class="cluster">
-<title>cluster_nd4544386dd5a4a36bebd7277937000e3</title>
-<g id="a_clust1"><a xlink:title="cl1">
-<path fill="#777777" fill-opacity="0.266667" stroke="#000000" d="M20,-8C20,-8 246,-8 246,-8 252,-8 258,-14 258,-20 258,-20 258,-71 258,-71 258,-77 252,-83 246,-83 246,-83 20,-83 20,-83 14,-83 8,-77 8,-71 8,-71 8,-20 8,-20 8,-14 14,-8 20,-8"/>
-<text text-anchor="middle" x="133" y="-67.8" font-family="Times,serif" font-size="14.00" fill="#000000">cl1</text>
+<title>cluster_n8a8612817c094d85b9b0b803c46f1507</title>
+<g id="a_clust1"><a xlink:title="clus">
+<path fill="#555555" fill-opacity="0.133333" stroke="#000000" d="M20,-8C20,-8 66,-8 66,-8 72,-8 78,-14 78,-20 78,-20 78,-125 78,-125 78,-131 72,-137 66,-137 66,-137 20,-137 20,-137 14,-137 8,-131 8,-125 8,-125 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="43" y="-121.8" font-family="Times,serif" font-size="14.00" fill="#000000">clus</text>
 </a>
 </g>
 </g>
-<!-- n8de0f40eac0d42e5866dca2dbeb301ac -->
+<!-- ncd442b221f2942769ddc2673e19cc596 -->
 <g id="node1" class="node">
-<title>n8de0f40eac0d42e5866dca2dbeb301ac</title>
-<g id="a_node1"><a xlink:title="A conv">
-<path fill="#ffffff" stroke="#000000" d="M58,-52C58,-52 28,-52 28,-52 22,-52 16,-46 16,-40 16,-40 16,-28 16,-28 16,-22 22,-16 28,-16 28,-16 58,-16 58,-16 64,-16 70,-22 70,-28 70,-28 70,-40 70,-40 70,-46 64,-52 58,-52"/>
-<text text-anchor="middle" x="43" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#000000">conv</text>
+<title>ncd442b221f2942769ddc2673e19cc596</title>
+<g id="a_node1"><a xlink:title="n1">
+<path fill="#f09bf2" fill-opacity="0.478431" stroke="#000000" d="M58,-106C58,-106 28,-106 28,-106 22,-106 16,-100 16,-94 16,-94 16,-82 16,-82 16,-76 22,-70 28,-70 28,-70 58,-70 58,-70 64,-70 70,-76 70,-82 70,-82 70,-94 70,-94 70,-100 64,-106 58,-106"/>
+<text text-anchor="middle" x="43" y="-84.3" font-family="Times,serif" font-size="14.00" fill="#000000">n1</text>
 </a>
 </g>
 </g>
-<!-- n427fc148b9e34fb2b79d84addf8fccaf -->
+<!-- n715d06202a914f968f6337ed7156c95f -->
 <g id="node2" class="node">
-<title>n427fc148b9e34fb2b79d84addf8fccaf</title>
-<g id="a_node2"><a xlink:title="Some norm">
-<path fill="#8dd3c7" stroke="#000000" d="M148,-52C148,-52 118,-52 118,-52 112,-52 106,-46 106,-40 106,-40 106,-28 106,-28 106,-22 112,-16 118,-16 118,-16 148,-16 148,-16 154,-16 160,-22 160,-28 160,-28 160,-40 160,-40 160,-46 154,-52 148,-52"/>
-<text text-anchor="middle" x="133" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#000000">norm</text>
+<title>n715d06202a914f968f6337ed7156c95f</title>
+<g id="a_node2"><a xlink:title="n2">
+<path fill="#f803fc" fill-opacity="0.352941" stroke="#000000" d="M58,-52C58,-52 28,-52 28,-52 22,-52 16,-46 16,-40 16,-40 16,-28 16,-28 16,-22 22,-16 28,-16 28,-16 58,-16 58,-16 64,-16 70,-22 70,-28 70,-28 70,-40 70,-40 70,-46 64,-52 58,-52"/>
+<text text-anchor="middle" x="43" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#000000">n2</text>
 </a>
 </g>
 </g>
-<!-- n8de0f40eac0d42e5866dca2dbeb301ac&#45;&gt;n427fc148b9e34fb2b79d84addf8fccaf -->
-<g id="edge1" class="edge">
-<title>n8de0f40eac0d42e5866dca2dbeb301ac&#45;&gt;n427fc148b9e34fb2b79d84addf8fccaf</title>
-<path fill="none" stroke="#000000" d="M70.003,-34C78.0277,-34 86.9665,-34 95.5309,-34"/>
-<polygon fill="#000000" stroke="#000000" points="95.7051,-37.5001 105.705,-34 95.705,-30.5001 95.7051,-37.5001"/>
-</g>
-<!-- nef70554c99df4c1b90d51c91f71abe5f -->
+<!-- na902e1b7e71a4856a69720c60559baa0 -->
 <g id="node3" class="node">
-<title>nef70554c99df4c1b90d51c91f71abe5f</title>
-<g id="a_node3"><a xlink:title="Activation">
-<path fill="#ffffb3" stroke="#000000" d="M238,-52C238,-52 208,-52 208,-52 202,-52 196,-46 196,-40 196,-40 196,-28 196,-28 196,-22 202,-16 208,-16 208,-16 238,-16 238,-16 244,-16 250,-22 250,-28 250,-28 250,-40 250,-40 250,-46 244,-52 238,-52"/>
-<text text-anchor="middle" x="223" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#000000">act</text>
+<title>na902e1b7e71a4856a69720c60559baa0</title>
+<g id="a_node3"><a xlink:title="n3">
+<path fill="#13fb00" fill-opacity="0.576471" stroke="#000000" d="M58,-181C58,-181 28,-181 28,-181 22,-181 16,-175 16,-169 16,-169 16,-157 16,-157 16,-151 22,-145 28,-145 28,-145 58,-145 58,-145 64,-145 70,-151 70,-157 70,-157 70,-169 70,-169 70,-175 64,-181 58,-181"/>
+<text text-anchor="middle" x="43" y="-159.3" font-family="Times,serif" font-size="14.00" fill="#000000">n3</text>
 </a>
 </g>
-</g>
-<!-- n427fc148b9e34fb2b79d84addf8fccaf&#45;&gt;nef70554c99df4c1b90d51c91f71abe5f -->
-<g id="edge2" class="edge">
-<title>n427fc148b9e34fb2b79d84addf8fccaf&#45;&gt;nef70554c99df4c1b90d51c91f71abe5f</title>
-<path fill="none" stroke="#000000" d="M160.003,-34C168.0277,-34 176.9665,-34 185.5309,-34"/>
-<polygon fill="#000000" stroke="#000000" points="185.7051,-37.5001 195.705,-34 185.705,-30.5001 185.7051,-37.5001"/>
 </g>
 </g>
 </svg>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Edges">Edges<a class="anchor-link" href="#Edges">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="Graph.first" class="doc_header"><code>Graph.first</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L96" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Graph.first</code>()</p>
+</blockquote>
+<p>First node in <code>Graph</code>, searching subgraphs recursively as needed</p>
 
 </div>
 
@@ -1011,7 +903,52 @@ summary: "Drawing graphs with graphviz."
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="Graph.connect_items" class="doc_header"><code>Graph.connect_items</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L112" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Graph.connect_items</code>(<strong><code>cl1</code></strong>, <strong><code>cl2</code></strong>)</p>
+<h4 id="Graph.last" class="doc_header"><code>Graph.last</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L106" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Graph.last</code>()</p>
+</blockquote>
+<p>Lastt node in <code>Graph</code>, searching subgraphs recursively as needed</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="Node.connect" class="doc_header"><code>Node.connect</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L116" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Node.connect</code>(<strong><code>item</code></strong>)</p>
+</blockquote>
+<p>Connect two nodes or clusters</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="Graph.connect" class="doc_header"><code>Graph.connect</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L116" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Graph.connect</code>(<strong><code>item</code></strong>)</p>
 </blockquote>
 <p>Connect two nodes or clusters</p>
 
@@ -1028,10 +965,18 @@ summary: "Drawing graphs with graphviz."
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">create_graph</span><span class="p">()</span>
-<span class="n">sg1</span> <span class="o">=</span> <span class="n">create_net_graph</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="s1">&#39;cl1&#39;</span><span class="p">,</span> <span class="n">lbls</span><span class="p">)</span>
-<span class="n">sg2</span> <span class="o">=</span> <span class="n">create_net_graph</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="s1">&#39;cl2&#39;</span><span class="p">,</span> <span class="n">lbls</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">connect_items</span><span class="p">(</span><span class="n">sg1</span><span class="p">,</span> <span class="n">sg2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sg2</span> <span class="o">=</span> <span class="n">Cluster</span><span class="p">(</span><span class="s1">&#39;clus2&#39;</span><span class="p">)</span>
+<span class="n">n1</span> <span class="o">=</span> <span class="n">sg2</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="s1">&#39;n1&#39;</span><span class="p">,</span> <span class="n">fillcolor</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">)</span>
+<span class="n">n2</span> <span class="o">=</span> <span class="n">sg2</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="s1">&#39;n2&#39;</span><span class="p">,</span> <span class="n">fillcolor</span><span class="o">=</span><span class="s1">&#39;lightblue&#39;</span><span class="p">)</span>
+<span class="n">sg2</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="n">n1</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">n2</span><span class="p">))</span>
+
+<span class="n">sg1</span> <span class="o">=</span> <span class="n">Cluster</span><span class="p">(</span><span class="s1">&#39;clus1&#39;</span><span class="p">)</span>
+<span class="n">sg1</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="n">sg2</span><span class="p">)</span>
+
+<span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">),</span><span class="n">Node</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">edges</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">b</span><span class="p">),</span><span class="n">a</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="n">sg1</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">b</span><span class="p">),</span><span class="n">sg2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">Dot</span><span class="p">()</span>
+<span class="n">g</span><span class="o">.</span><span class="n">add_items</span><span class="p">(</span><span class="n">sg1</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="o">*</span><span class="n">edges</span><span class="p">)</span>
 <span class="n">g</span>
 </pre></div>
 
@@ -1052,110 +997,92 @@ summary: "Drawing graphs with graphviz."
 <!-- Generated by graphviz version 2.40.1 (20161225.0304)
  -->
 <!-- Title: G Pages: 1 -->
-<svg width="544pt" height="99pt"
- viewBox="0.00 0.00 544.00 99.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 95)">
+<svg width="266pt" height="192pt"
+ viewBox="0.00 0.00 266.00 192.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 188)">
 <title>G</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-95 540,-95 540,4 -4,4"/>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-188 262,-188 262,4 -4,4"/>
 <g id="clust1" class="cluster">
-<title>cluster_n1b00c9f5a3c8433288c8ecafbb058756</title>
-<g id="a_clust1"><a xlink:title="cl1">
-<path fill="#777777" fill-opacity="0.266667" stroke="#000000" d="M20,-8C20,-8 246,-8 246,-8 252,-8 258,-14 258,-20 258,-20 258,-71 258,-71 258,-77 252,-83 246,-83 246,-83 20,-83 20,-83 14,-83 8,-77 8,-71 8,-71 8,-20 8,-20 8,-14 14,-8 20,-8"/>
-<text text-anchor="middle" x="133" y="-67.8" font-family="Times,serif" font-size="14.00" fill="#000000">cl1</text>
+<title>cluster_n8e58130fe5064fe29084a5e6a221af9d</title>
+<g id="a_clust1"><a xlink:title="clus1">
+<path fill="#555555" fill-opacity="0.133333" stroke="#000000" d="M20,-62C20,-62 172,-62 172,-62 178,-62 184,-68 184,-74 184,-74 184,-164 184,-164 184,-170 178,-176 172,-176 172,-176 20,-176 20,-176 14,-176 8,-170 8,-164 8,-164 8,-74 8,-74 8,-68 14,-62 20,-62"/>
+<text text-anchor="middle" x="96" y="-160.8" font-family="Times,serif" font-size="14.00" fill="#000000">clus1</text>
 </a>
 </g>
 </g>
 <g id="clust2" class="cluster">
-<title>cluster_nb5d5d1d6694a41a8a083809d533aae2c</title>
-<g id="a_clust2"><a xlink:title="cl2">
-<path fill="#777777" fill-opacity="0.266667" stroke="#000000" d="M290,-8C290,-8 516,-8 516,-8 522,-8 528,-14 528,-20 528,-20 528,-71 528,-71 528,-77 522,-83 516,-83 516,-83 290,-83 290,-83 284,-83 278,-77 278,-71 278,-71 278,-20 278,-20 278,-14 284,-8 290,-8"/>
-<text text-anchor="middle" x="403" y="-67.8" font-family="Times,serif" font-size="14.00" fill="#000000">cl2</text>
+<title>cluster_n943e6be9c9634266b3c23d082ce7df18</title>
+<g id="a_clust2"><a xlink:title="clus2">
+<path fill="#555555" fill-opacity="0.133333" stroke="#000000" d="M28,-70C28,-70 164,-70 164,-70 170,-70 176,-76 176,-82 176,-82 176,-133 176,-133 176,-139 170,-145 164,-145 164,-145 28,-145 28,-145 22,-145 16,-139 16,-133 16,-133 16,-82 16,-82 16,-76 22,-70 28,-70"/>
+<text text-anchor="middle" x="96" y="-129.8" font-family="Times,serif" font-size="14.00" fill="#000000">clus2</text>
 </a>
 </g>
 </g>
-<!-- n8fba9714c0274588be7195486b1034b0 -->
+<!-- n32c503e56f2a430e8d0d1017c0aa94cd -->
 <g id="node1" class="node">
-<title>n8fba9714c0274588be7195486b1034b0</title>
-<g id="a_node1"><a xlink:title="A conv">
-<path fill="#ffffff" stroke="#000000" d="M58,-52C58,-52 28,-52 28,-52 22,-52 16,-46 16,-40 16,-40 16,-28 16,-28 16,-22 22,-16 28,-16 28,-16 58,-16 58,-16 64,-16 70,-22 70,-28 70,-28 70,-40 70,-40 70,-46 64,-52 58,-52"/>
-<text text-anchor="middle" x="43" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#000000">conv</text>
+<title>n32c503e56f2a430e8d0d1017c0aa94cd</title>
+<g id="a_node1"><a xlink:title="n1">
+<path fill="#ffc0cb" stroke="#000000" d="M66,-114C66,-114 36,-114 36,-114 30,-114 24,-108 24,-102 24,-102 24,-90 24,-90 24,-84 30,-78 36,-78 36,-78 66,-78 66,-78 72,-78 78,-84 78,-90 78,-90 78,-102 78,-102 78,-108 72,-114 66,-114"/>
+<text text-anchor="middle" x="51" y="-92.3" font-family="Times,serif" font-size="14.00" fill="#000000">n1</text>
 </a>
 </g>
 </g>
-<!-- n08eed79845df4ceeb158ce6630a72354 -->
+<!-- ne4cf58b71ade44368fef33fdd32fc9fe -->
 <g id="node2" class="node">
-<title>n08eed79845df4ceeb158ce6630a72354</title>
-<g id="a_node2"><a xlink:title="Some norm">
-<path fill="#8dd3c7" stroke="#000000" d="M148,-52C148,-52 118,-52 118,-52 112,-52 106,-46 106,-40 106,-40 106,-28 106,-28 106,-22 112,-16 118,-16 118,-16 148,-16 148,-16 154,-16 160,-22 160,-28 160,-28 160,-40 160,-40 160,-46 154,-52 148,-52"/>
-<text text-anchor="middle" x="133" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#000000">norm</text>
+<title>ne4cf58b71ade44368fef33fdd32fc9fe</title>
+<g id="a_node2"><a xlink:title="n2">
+<path fill="#add8e6" stroke="#000000" d="M156,-114C156,-114 126,-114 126,-114 120,-114 114,-108 114,-102 114,-102 114,-90 114,-90 114,-84 120,-78 126,-78 126,-78 156,-78 156,-78 162,-78 168,-84 168,-90 168,-90 168,-102 168,-102 168,-108 162,-114 156,-114"/>
+<text text-anchor="middle" x="141" y="-92.3" font-family="Times,serif" font-size="14.00" fill="#000000">n2</text>
 </a>
 </g>
 </g>
-<!-- n8fba9714c0274588be7195486b1034b0&#45;&gt;n08eed79845df4ceeb158ce6630a72354 -->
+<!-- n32c503e56f2a430e8d0d1017c0aa94cd&#45;&gt;ne4cf58b71ade44368fef33fdd32fc9fe -->
 <g id="edge1" class="edge">
-<title>n8fba9714c0274588be7195486b1034b0&#45;&gt;n08eed79845df4ceeb158ce6630a72354</title>
-<path fill="none" stroke="#000000" d="M70.003,-34C78.0277,-34 86.9665,-34 95.5309,-34"/>
-<polygon fill="#000000" stroke="#000000" points="95.7051,-37.5001 105.705,-34 95.705,-30.5001 95.7051,-37.5001"/>
+<title>n32c503e56f2a430e8d0d1017c0aa94cd&#45;&gt;ne4cf58b71ade44368fef33fdd32fc9fe</title>
+<path fill="none" stroke="#000000" d="M78.003,-96C86.0277,-96 94.9665,-96 103.5309,-96"/>
+<polygon fill="#000000" stroke="#000000" points="103.7051,-99.5001 113.705,-96 103.705,-92.5001 103.7051,-99.5001"/>
 </g>
-<!-- nfde843c14bc24a2884de13d60a1dacf1 -->
+<!-- n2b28a6ac1645472f87c471fdbc513c16 -->
 <g id="node3" class="node">
-<title>nfde843c14bc24a2884de13d60a1dacf1</title>
-<g id="a_node3"><a xlink:title="Activation">
-<path fill="#ffffb3" stroke="#000000" d="M238,-52C238,-52 208,-52 208,-52 202,-52 196,-46 196,-40 196,-40 196,-28 196,-28 196,-22 202,-16 208,-16 208,-16 238,-16 238,-16 244,-16 250,-22 250,-28 250,-28 250,-40 250,-40 250,-46 244,-52 238,-52"/>
-<text text-anchor="middle" x="223" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#000000">act</text>
+<title>n2b28a6ac1645472f87c471fdbc513c16</title>
+<g id="a_node3"><a xlink:title="a">
+<path fill="#ffc40a" fill-opacity="0.486275" stroke="#000000" d="M156,-36C156,-36 126,-36 126,-36 120,-36 114,-30 114,-24 114,-24 114,-12 114,-12 114,-6 120,0 126,0 126,0 156,0 156,0 162,0 168,-6 168,-12 168,-12 168,-24 168,-24 168,-30 162,-36 156,-36"/>
+<text text-anchor="middle" x="141" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">a</text>
 </a>
 </g>
 </g>
-<!-- n08eed79845df4ceeb158ce6630a72354&#45;&gt;nfde843c14bc24a2884de13d60a1dacf1 -->
-<g id="edge2" class="edge">
-<title>n08eed79845df4ceeb158ce6630a72354&#45;&gt;nfde843c14bc24a2884de13d60a1dacf1</title>
-<path fill="none" stroke="#000000" d="M160.003,-34C168.0277,-34 176.9665,-34 185.5309,-34"/>
-<polygon fill="#000000" stroke="#000000" points="185.7051,-37.5001 195.705,-34 185.705,-30.5001 185.7051,-37.5001"/>
-</g>
-<!-- n6cfad00b6fe849e4a56ada6d9c5295d0 -->
-<g id="node4" class="node">
-<title>n6cfad00b6fe849e4a56ada6d9c5295d0</title>
-<g id="a_node4"><a xlink:title="A conv">
-<path fill="#ffffff" stroke="#000000" d="M328,-52C328,-52 298,-52 298,-52 292,-52 286,-46 286,-40 286,-40 286,-28 286,-28 286,-22 292,-16 298,-16 298,-16 328,-16 328,-16 334,-16 340,-22 340,-28 340,-28 340,-40 340,-40 340,-46 334,-52 328,-52"/>
-<text text-anchor="middle" x="313" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#000000">conv</text>
-</a>
-</g>
-</g>
-<!-- nfde843c14bc24a2884de13d60a1dacf1&#45;&gt;n6cfad00b6fe849e4a56ada6d9c5295d0 -->
+<!-- n32c503e56f2a430e8d0d1017c0aa94cd&#45;&gt;n2b28a6ac1645472f87c471fdbc513c16 -->
 <g id="edge5" class="edge">
-<title>nfde843c14bc24a2884de13d60a1dacf1&#45;&gt;n6cfad00b6fe849e4a56ada6d9c5295d0</title>
-<path fill="none" stroke="#000000" d="M257.9967,-34C263.7458,-34 269.7244,-34 275.5309,-34"/>
-<polygon fill="#000000" stroke="#000000" points="268.0001,-37.5004 278,-34 267.9999,-30.5004 268.0001,-37.5004"/>
+<title>n32c503e56f2a430e8d0d1017c0aa94cd&#45;&gt;n2b28a6ac1645472f87c471fdbc513c16</title>
+<path fill="none" stroke="#000000" d="M71.874,-77.9092C83.8287,-67.5484 99.0087,-54.3925 112.0964,-43.0498"/>
+<polygon fill="#000000" stroke="#000000" points="114.6628,-45.4572 119.9274,-36.2629 110.0782,-40.1673 114.6628,-45.4572"/>
 </g>
-<!-- n2f32fa1eb9a545e7951eb7917ad0a3a7 -->
-<g id="node5" class="node">
-<title>n2f32fa1eb9a545e7951eb7917ad0a3a7</title>
-<g id="a_node5"><a xlink:title="Some norm">
-<path fill="#8dd3c7" stroke="#000000" d="M418,-52C418,-52 388,-52 388,-52 382,-52 376,-46 376,-40 376,-40 376,-28 376,-28 376,-22 382,-16 388,-16 388,-16 418,-16 418,-16 424,-16 430,-22 430,-28 430,-28 430,-40 430,-40 430,-46 424,-52 418,-52"/>
-<text text-anchor="middle" x="403" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#000000">norm</text>
+<!-- nc190dee18f864108a7fbccc9d8a33e74 -->
+<g id="node4" class="node">
+<title>nc190dee18f864108a7fbccc9d8a33e74</title>
+<g id="a_node4"><a xlink:title="b">
+<path fill="#00580f" fill-opacity="0.364706" stroke="#000000" d="M246,-75C246,-75 216,-75 216,-75 210,-75 204,-69 204,-63 204,-63 204,-51 204,-51 204,-45 210,-39 216,-39 216,-39 246,-39 246,-39 252,-39 258,-45 258,-51 258,-51 258,-63 258,-63 258,-69 252,-75 246,-75"/>
+<text text-anchor="middle" x="231" y="-53.3" font-family="Times,serif" font-size="14.00" fill="#000000">b</text>
 </a>
 </g>
 </g>
-<!-- n6cfad00b6fe849e4a56ada6d9c5295d0&#45;&gt;n2f32fa1eb9a545e7951eb7917ad0a3a7 -->
-<g id="edge3" class="edge">
-<title>n6cfad00b6fe849e4a56ada6d9c5295d0&#45;&gt;n2f32fa1eb9a545e7951eb7917ad0a3a7</title>
-<path fill="none" stroke="#000000" d="M340.003,-34C348.0277,-34 356.9665,-34 365.5309,-34"/>
-<polygon fill="#000000" stroke="#000000" points="365.7051,-37.5001 375.705,-34 365.705,-30.5001 365.7051,-37.5001"/>
-</g>
-<!-- n378c557ed8a144b5805edf77aab41de4 -->
-<g id="node6" class="node">
-<title>n378c557ed8a144b5805edf77aab41de4</title>
-<g id="a_node6"><a xlink:title="Activation">
-<path fill="#ffffb3" stroke="#000000" d="M508,-52C508,-52 478,-52 478,-52 472,-52 466,-46 466,-40 466,-40 466,-28 466,-28 466,-22 472,-16 478,-16 478,-16 508,-16 508,-16 514,-16 520,-22 520,-28 520,-28 520,-40 520,-40 520,-46 514,-52 508,-52"/>
-<text text-anchor="middle" x="493" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#000000">act</text>
-</a>
-</g>
-</g>
-<!-- n2f32fa1eb9a545e7951eb7917ad0a3a7&#45;&gt;n378c557ed8a144b5805edf77aab41de4 -->
+<!-- ne4cf58b71ade44368fef33fdd32fc9fe&#45;&gt;nc190dee18f864108a7fbccc9d8a33e74 -->
 <g id="edge4" class="edge">
-<title>n2f32fa1eb9a545e7951eb7917ad0a3a7&#45;&gt;n378c557ed8a144b5805edf77aab41de4</title>
-<path fill="none" stroke="#000000" d="M430.003,-34C438.0277,-34 446.9665,-34 455.5309,-34"/>
-<polygon fill="#000000" stroke="#000000" points="455.7051,-37.5001 465.705,-34 455.705,-30.5001 455.7051,-37.5001"/>
+<title>ne4cf58b71ade44368fef33fdd32fc9fe&#45;&gt;nc190dee18f864108a7fbccc9d8a33e74</title>
+<path fill="none" stroke="#000000" d="M183.9974,-77.3678C187.4688,-75.8635 190.9562,-74.3523 194.3766,-72.8701"/>
+<polygon fill="#000000" stroke="#000000" points="195.9211,-76.0154 203.705,-68.8278 193.1378,-69.5925 195.9211,-76.0154"/>
+</g>
+<!-- n2b28a6ac1645472f87c471fdbc513c16&#45;&gt;n2b28a6ac1645472f87c471fdbc513c16 -->
+<g id="edge3" class="edge">
+<title>n2b28a6ac1645472f87c471fdbc513c16&#45;&gt;n2b28a6ac1645472f87c471fdbc513c16</title>
+<path fill="none" stroke="#000000" d="M124.7183,-36.1527C122.2134,-45.5391 127.6406,-54 141,-54 149.1409,-54 154.3362,-50.8581 156.5861,-46.2796"/>
+<polygon fill="#000000" stroke="#000000" points="160.0881,-46.3691 157.2817,-36.1527 153.1046,-45.8893 160.0881,-46.3691"/>
+</g>
+<!-- n2b28a6ac1645472f87c471fdbc513c16&#45;&gt;nc190dee18f864108a7fbccc9d8a33e74 -->
+<g id="edge2" class="edge">
+<title>n2b28a6ac1645472f87c471fdbc513c16&#45;&gt;nc190dee18f864108a7fbccc9d8a33e74</title>
+<path fill="none" stroke="#000000" d="M168.003,-29.7013C176.2922,-33.2933 185.5569,-37.308 194.3766,-41.1299"/>
+<polygon fill="#000000" stroke="#000000" points="193.1378,-44.4075 203.705,-45.1722 195.9211,-37.9846 193.1378,-44.4075"/>
 </g>
 </g>
 </svg>
@@ -1170,26 +1097,42 @@ summary: "Drawing graphs with graphviz."
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As well as connecting <a href="drawgraph.html#Cluster"><code>Cluster</code></a>s, you can also connect any combination of <a href="drawgraph.html#Cluster"><code>Cluster</code></a>s and <code>Nodes</code>.</p>
-<p>Note that <a href="drawgraph.html"><code>drawgraph</code></a> adds <code>__getitem__</code> to <a href="drawgraph.html#Cluster"><code>Cluster</code></a>, which makes it easy to connect to different <a href="drawgraph.html#Node"><code>Node</code></a>s inside a <a href="drawgraph.html#Cluster"><code>Cluster</code></a>.</p>
+<h2 id="Sequential">Sequential<a class="anchor-link" href="#Sequential">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="Graph.seq_edges" class="doc_header"><code>Graph.seq_edges</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L129" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>Graph.seq_edges</code>(<strong><code>items</code></strong>)</p>
+</blockquote>
+<p>Add edges between each pair of nodes in <code>items</code></p>
+
+</div>
+
+</div>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">create_graph</span><span class="p">()</span>
-<span class="n">sg1</span> <span class="o">=</span> <span class="n">create_net_graph</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="s1">&#39;cl1&#39;</span><span class="p">,</span> <span class="n">lbls</span><span class="p">)</span>
-<span class="n">sg2</span> <span class="o">=</span> <span class="n">create_net_graph</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="s1">&#39;cl2&#39;</span><span class="p">,</span> <span class="n">lbls</span><span class="p">)</span>
-<span class="c1"># Connect a cluster to a cluster</span>
-<span class="n">g</span><span class="o">.</span><span class="n">connect_items</span><span class="p">(</span><span class="n">sg1</span><span class="p">,</span> <span class="n">sg2</span><span class="p">)</span>
-<span class="c1"># Connect a cluster to a node</span>
-<span class="n">g</span><span class="o">.</span><span class="n">connect_items</span><span class="p">(</span><span class="n">sg1</span><span class="p">,</span> <span class="n">sg2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="c1"># Connect a node to a node</span>
-<span class="n">g</span><span class="o">.</span><span class="n">connect_items</span><span class="p">(</span><span class="n">sg1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sg1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">Dot</span><span class="p">()</span>
+<span class="n">its</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">add_items</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">add_items</span><span class="p">(</span><span class="o">*</span><span class="n">g</span><span class="o">.</span><span class="n">seq_edges</span><span class="p">(</span><span class="n">its</span><span class="p">))</span>
 <span class="n">g</span>
 </pre></div>
 
@@ -1210,122 +1153,49 @@ summary: "Drawing graphs with graphviz."
 <!-- Generated by graphviz version 2.40.1 (20161225.0304)
  -->
 <!-- Title: G Pages: 1 -->
-<svg width="544pt" height="117pt"
- viewBox="0.00 0.00 544.00 117.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 113)">
+<svg width="242pt" height="44pt"
+ viewBox="0.00 0.00 242.00 44.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 40)">
 <title>G</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-113 540,-113 540,4 -4,4"/>
-<g id="clust1" class="cluster">
-<title>cluster_nbb3440daf26c4e0582151b637e740f1d</title>
-<g id="a_clust1"><a xlink:title="cl1">
-<path fill="#777777" fill-opacity="0.266667" stroke="#000000" d="M20,-8C20,-8 246,-8 246,-8 252,-8 258,-14 258,-20 258,-20 258,-89 258,-89 258,-95 252,-101 246,-101 246,-101 20,-101 20,-101 14,-101 8,-95 8,-89 8,-89 8,-20 8,-20 8,-14 14,-8 20,-8"/>
-<text text-anchor="middle" x="133" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">cl1</text>
-</a>
-</g>
-</g>
-<g id="clust2" class="cluster">
-<title>cluster_nf7c20db48efc4d2fb9f76de526fa39b4</title>
-<g id="a_clust2"><a xlink:title="cl2">
-<path fill="#777777" fill-opacity="0.266667" stroke="#000000" d="M290,-24C290,-24 516,-24 516,-24 522,-24 528,-30 528,-36 528,-36 528,-87 528,-87 528,-93 522,-99 516,-99 516,-99 290,-99 290,-99 284,-99 278,-93 278,-87 278,-87 278,-36 278,-36 278,-30 284,-24 290,-24"/>
-<text text-anchor="middle" x="403" y="-83.8" font-family="Times,serif" font-size="14.00" fill="#000000">cl2</text>
-</a>
-</g>
-</g>
-<!-- n72fafb4fbd5d42c884b70834fa276601 -->
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-40 238,-40 238,4 -4,4"/>
+<!-- n8e5a9804c4dd4661b7bd4d64671f83e5 -->
 <g id="node1" class="node">
-<title>n72fafb4fbd5d42c884b70834fa276601</title>
-<g id="a_node1"><a xlink:title="A conv">
-<path fill="#ffffff" stroke="#000000" d="M58,-52C58,-52 28,-52 28,-52 22,-52 16,-46 16,-40 16,-40 16,-28 16,-28 16,-22 22,-16 28,-16 28,-16 58,-16 58,-16 64,-16 70,-22 70,-28 70,-28 70,-40 70,-40 70,-46 64,-52 58,-52"/>
-<text text-anchor="middle" x="43" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#000000">conv</text>
+<title>n8e5a9804c4dd4661b7bd4d64671f83e5</title>
+<g id="a_node1"><a xlink:title="a">
+<path fill="#ffc40a" fill-opacity="0.486275" stroke="#000000" d="M42,-36C42,-36 12,-36 12,-36 6,-36 0,-30 0,-24 0,-24 0,-12 0,-12 0,-6 6,0 12,0 12,0 42,0 42,0 48,0 54,-6 54,-12 54,-12 54,-24 54,-24 54,-30 48,-36 42,-36"/>
+<text text-anchor="middle" x="27" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">a</text>
 </a>
 </g>
 </g>
-<!-- n72fafb4fbd5d42c884b70834fa276601&#45;&gt;n72fafb4fbd5d42c884b70834fa276601 -->
-<g id="edge7" class="edge">
-<title>n72fafb4fbd5d42c884b70834fa276601&#45;&gt;n72fafb4fbd5d42c884b70834fa276601</title>
-<path fill="none" stroke="#000000" d="M26.7183,-52.1527C24.2134,-61.5391 29.6406,-70 43,-70 51.1409,-70 56.3362,-66.8581 58.5861,-62.2796"/>
-<polygon fill="#000000" stroke="#000000" points="62.0881,-62.3691 59.2817,-52.1527 55.1046,-61.8893 62.0881,-62.3691"/>
-</g>
-<!-- n4972ff65477843abbaeb638abaaca481 -->
+<!-- nb846fc4d73bf42afb8e55453ea89e78c -->
 <g id="node2" class="node">
-<title>n4972ff65477843abbaeb638abaaca481</title>
-<g id="a_node2"><a xlink:title="Some norm">
-<path fill="#8dd3c7" stroke="#000000" d="M148,-52C148,-52 118,-52 118,-52 112,-52 106,-46 106,-40 106,-40 106,-28 106,-28 106,-22 112,-16 118,-16 118,-16 148,-16 148,-16 154,-16 160,-22 160,-28 160,-28 160,-40 160,-40 160,-46 154,-52 148,-52"/>
-<text text-anchor="middle" x="133" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#000000">norm</text>
+<title>nb846fc4d73bf42afb8e55453ea89e78c</title>
+<g id="a_node2"><a xlink:title="b">
+<path fill="#00580f" fill-opacity="0.364706" stroke="#000000" d="M132,-36C132,-36 102,-36 102,-36 96,-36 90,-30 90,-24 90,-24 90,-12 90,-12 90,-6 96,0 102,0 102,0 132,0 132,0 138,0 144,-6 144,-12 144,-12 144,-24 144,-24 144,-30 138,-36 132,-36"/>
+<text text-anchor="middle" x="117" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">b</text>
 </a>
 </g>
 </g>
-<!-- n72fafb4fbd5d42c884b70834fa276601&#45;&gt;n4972ff65477843abbaeb638abaaca481 -->
+<!-- n8e5a9804c4dd4661b7bd4d64671f83e5&#45;&gt;nb846fc4d73bf42afb8e55453ea89e78c -->
 <g id="edge1" class="edge">
-<title>n72fafb4fbd5d42c884b70834fa276601&#45;&gt;n4972ff65477843abbaeb638abaaca481</title>
-<path fill="none" stroke="#000000" d="M70.003,-34C78.0277,-34 86.9665,-34 95.5309,-34"/>
-<polygon fill="#000000" stroke="#000000" points="95.7051,-37.5001 105.705,-34 95.705,-30.5001 95.7051,-37.5001"/>
+<title>n8e5a9804c4dd4661b7bd4d64671f83e5&#45;&gt;nb846fc4d73bf42afb8e55453ea89e78c</title>
+<path fill="none" stroke="#000000" d="M54.003,-18C62.0277,-18 70.9665,-18 79.5309,-18"/>
+<polygon fill="#000000" stroke="#000000" points="79.7051,-21.5001 89.705,-18 79.705,-14.5001 79.7051,-21.5001"/>
 </g>
-<!-- n184a095eda464c3882c140b65937f14a -->
+<!-- nf2029c6ee7814d9981a23c5af43305ec -->
 <g id="node3" class="node">
-<title>n184a095eda464c3882c140b65937f14a</title>
-<g id="a_node3"><a xlink:title="Activation">
-<path fill="#ffffb3" stroke="#000000" d="M238,-52C238,-52 208,-52 208,-52 202,-52 196,-46 196,-40 196,-40 196,-28 196,-28 196,-22 202,-16 208,-16 208,-16 238,-16 238,-16 244,-16 250,-22 250,-28 250,-28 250,-40 250,-40 250,-46 244,-52 238,-52"/>
-<text text-anchor="middle" x="223" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#000000">act</text>
+<title>nf2029c6ee7814d9981a23c5af43305ec</title>
+<g id="a_node3"><a xlink:title="c">
+<path fill="#ffbc0d" fill-opacity="0.317647" stroke="#000000" d="M222,-36C222,-36 192,-36 192,-36 186,-36 180,-30 180,-24 180,-24 180,-12 180,-12 180,-6 186,0 192,0 192,0 222,0 222,0 228,0 234,-6 234,-12 234,-12 234,-24 234,-24 234,-30 228,-36 222,-36"/>
+<text text-anchor="middle" x="207" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">c</text>
 </a>
 </g>
 </g>
-<!-- n4972ff65477843abbaeb638abaaca481&#45;&gt;n184a095eda464c3882c140b65937f14a -->
+<!-- nb846fc4d73bf42afb8e55453ea89e78c&#45;&gt;nf2029c6ee7814d9981a23c5af43305ec -->
 <g id="edge2" class="edge">
-<title>n4972ff65477843abbaeb638abaaca481&#45;&gt;n184a095eda464c3882c140b65937f14a</title>
-<path fill="none" stroke="#000000" d="M160.003,-34C168.0277,-34 176.9665,-34 185.5309,-34"/>
-<polygon fill="#000000" stroke="#000000" points="185.7051,-37.5001 195.705,-34 185.705,-30.5001 185.7051,-37.5001"/>
-</g>
-<!-- n4383dee60f254a168ded1216028e4719 -->
-<g id="node4" class="node">
-<title>n4383dee60f254a168ded1216028e4719</title>
-<g id="a_node4"><a xlink:title="A conv">
-<path fill="#ffffff" stroke="#000000" d="M328,-68C328,-68 298,-68 298,-68 292,-68 286,-62 286,-56 286,-56 286,-44 286,-44 286,-38 292,-32 298,-32 298,-32 328,-32 328,-32 334,-32 340,-38 340,-44 340,-44 340,-56 340,-56 340,-62 334,-68 328,-68"/>
-<text text-anchor="middle" x="313" y="-46.3" font-family="Times,serif" font-size="14.00" fill="#000000">conv</text>
-</a>
-</g>
-</g>
-<!-- n184a095eda464c3882c140b65937f14a&#45;&gt;n4383dee60f254a168ded1216028e4719 -->
-<g id="edge5" class="edge">
-<title>n184a095eda464c3882c140b65937f14a&#45;&gt;n4383dee60f254a168ded1216028e4719</title>
-<path fill="none" stroke="#000000" d="M257.9988,-40.222C263.8405,-41.2605 269.919,-42.3412 275.8131,-43.389"/>
-<polygon fill="#000000" stroke="#000000" points="267.4051,-44.1769 278,-44.1476 269.6993,-37.5634 267.4051,-44.1769"/>
-</g>
-<!-- n1a737bcf2b5445009a3f8233cd847456 -->
-<g id="node6" class="node">
-<title>n1a737bcf2b5445009a3f8233cd847456</title>
-<g id="a_node6"><a xlink:title="Activation">
-<path fill="#ffffb3" stroke="#000000" d="M508,-68C508,-68 478,-68 478,-68 472,-68 466,-62 466,-56 466,-56 466,-44 466,-44 466,-38 472,-32 478,-32 478,-32 508,-32 508,-32 514,-32 520,-38 520,-44 520,-44 520,-56 520,-56 520,-62 514,-68 508,-68"/>
-<text text-anchor="middle" x="493" y="-46.3" font-family="Times,serif" font-size="14.00" fill="#000000">act</text>
-</a>
-</g>
-</g>
-<!-- n184a095eda464c3882c140b65937f14a&#45;&gt;n1a737bcf2b5445009a3f8233cd847456 -->
-<g id="edge6" class="edge">
-<title>n184a095eda464c3882c140b65937f14a&#45;&gt;n1a737bcf2b5445009a3f8233cd847456</title>
-<path fill="none" stroke="#000000" d="M257.9959,-25.9279C264.6061,-24.7089 271.4886,-23.6448 278,-23 345.2268,-16.3432 363.8241,-9.4169 430,-23 438.8927,-24.8253 448.0801,-27.9605 456.5968,-31.4627"/>
-<polygon fill="#000000" stroke="#000000" points="455.3116,-34.7207 465.876,-35.5226 458.1175,-28.3077 455.3116,-34.7207"/>
-</g>
-<!-- n5d4d53c7edbe48d0abe206da5e70a240 -->
-<g id="node5" class="node">
-<title>n5d4d53c7edbe48d0abe206da5e70a240</title>
-<g id="a_node5"><a xlink:title="Some norm">
-<path fill="#8dd3c7" stroke="#000000" d="M418,-68C418,-68 388,-68 388,-68 382,-68 376,-62 376,-56 376,-56 376,-44 376,-44 376,-38 382,-32 388,-32 388,-32 418,-32 418,-32 424,-32 430,-38 430,-44 430,-44 430,-56 430,-56 430,-62 424,-68 418,-68"/>
-<text text-anchor="middle" x="403" y="-46.3" font-family="Times,serif" font-size="14.00" fill="#000000">norm</text>
-</a>
-</g>
-</g>
-<!-- n4383dee60f254a168ded1216028e4719&#45;&gt;n5d4d53c7edbe48d0abe206da5e70a240 -->
-<g id="edge3" class="edge">
-<title>n4383dee60f254a168ded1216028e4719&#45;&gt;n5d4d53c7edbe48d0abe206da5e70a240</title>
-<path fill="none" stroke="#000000" d="M340.003,-50C348.0277,-50 356.9665,-50 365.5309,-50"/>
-<polygon fill="#000000" stroke="#000000" points="365.7051,-53.5001 375.705,-50 365.705,-46.5001 365.7051,-53.5001"/>
-</g>
-<!-- n5d4d53c7edbe48d0abe206da5e70a240&#45;&gt;n1a737bcf2b5445009a3f8233cd847456 -->
-<g id="edge4" class="edge">
-<title>n5d4d53c7edbe48d0abe206da5e70a240&#45;&gt;n1a737bcf2b5445009a3f8233cd847456</title>
-<path fill="none" stroke="#000000" d="M430.003,-50C438.0277,-50 446.9665,-50 455.5309,-50"/>
-<polygon fill="#000000" stroke="#000000" points="455.7051,-53.5001 465.705,-50 455.705,-46.5001 455.7051,-53.5001"/>
+<title>nb846fc4d73bf42afb8e55453ea89e78c&#45;&gt;nf2029c6ee7814d9981a23c5af43305ec</title>
+<path fill="none" stroke="#000000" d="M144.003,-18C152.0277,-18 160.9665,-18 169.5309,-18"/>
+<polygon fill="#000000" stroke="#000000" points="169.7051,-21.5001 179.705,-18 169.705,-14.5001 169.7051,-21.5001"/>
 </g>
 </g>
 </svg>
@@ -1334,6 +1204,411 @@ summary: "Drawing graphs with graphviz."
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="seq_cluster" class="doc_header"><code>seq_cluster</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L135" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>seq_cluster</code>(<strong><code>items</code></strong>, <strong><code>cluster_label</code></strong>=<em><code>''</code></em>, <strong>**<code>kwargs</code></strong>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">Dot</span><span class="p">()</span>
+<span class="n">g</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="n">seq_cluster</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span> <span class="s1">&#39;clust&#39;</span><span class="p">))</span>
+<span class="n">g</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_svg output_subarea output_execute_result">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: G Pages: 1 -->
+<svg width="274pt" height="99pt"
+ viewBox="0.00 0.00 274.00 99.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 95)">
+<title>G</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-95 270,-95 270,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_nab2ec1664b2c4c6f9edf5ced19dc981f</title>
+<g id="a_clust1"><a xlink:title="clust">
+<path fill="#555555" fill-opacity="0.133333" stroke="#000000" d="M20,-8C20,-8 246,-8 246,-8 252,-8 258,-14 258,-20 258,-20 258,-71 258,-71 258,-77 252,-83 246,-83 246,-83 20,-83 20,-83 14,-83 8,-77 8,-71 8,-71 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="133" y="-67.8" font-family="Times,serif" font-size="14.00" fill="#000000">clust</text>
+</a>
+</g>
+</g>
+<!-- na439f99a70084466a65b53fc1dedc37f -->
+<g id="node1" class="node">
+<title>na439f99a70084466a65b53fc1dedc37f</title>
+<g id="a_node1"><a xlink:title="a">
+<path fill="#ffc40a" fill-opacity="0.486275" stroke="#000000" d="M58,-52C58,-52 28,-52 28,-52 22,-52 16,-46 16,-40 16,-40 16,-28 16,-28 16,-22 22,-16 28,-16 28,-16 58,-16 58,-16 64,-16 70,-22 70,-28 70,-28 70,-40 70,-40 70,-46 64,-52 58,-52"/>
+<text text-anchor="middle" x="43" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#000000">a</text>
+</a>
+</g>
+</g>
+<!-- nfd80569436d14e3b8d7904db6266aeb6 -->
+<g id="node2" class="node">
+<title>nfd80569436d14e3b8d7904db6266aeb6</title>
+<g id="a_node2"><a xlink:title="b">
+<path fill="#00580f" fill-opacity="0.364706" stroke="#000000" d="M148,-52C148,-52 118,-52 118,-52 112,-52 106,-46 106,-40 106,-40 106,-28 106,-28 106,-22 112,-16 118,-16 118,-16 148,-16 148,-16 154,-16 160,-22 160,-28 160,-28 160,-40 160,-40 160,-46 154,-52 148,-52"/>
+<text text-anchor="middle" x="133" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#000000">b</text>
+</a>
+</g>
+</g>
+<!-- na439f99a70084466a65b53fc1dedc37f&#45;&gt;nfd80569436d14e3b8d7904db6266aeb6 -->
+<g id="edge1" class="edge">
+<title>na439f99a70084466a65b53fc1dedc37f&#45;&gt;nfd80569436d14e3b8d7904db6266aeb6</title>
+<path fill="none" stroke="#000000" d="M70.003,-34C78.0277,-34 86.9665,-34 95.5309,-34"/>
+<polygon fill="#000000" stroke="#000000" points="95.7051,-37.5001 105.705,-34 95.705,-30.5001 95.7051,-37.5001"/>
+</g>
+<!-- n78334cca8be544b5b2d072c64b35aae6 -->
+<g id="node3" class="node">
+<title>n78334cca8be544b5b2d072c64b35aae6</title>
+<g id="a_node3"><a xlink:title="c">
+<path fill="#ffbc0d" fill-opacity="0.317647" stroke="#000000" d="M238,-52C238,-52 208,-52 208,-52 202,-52 196,-46 196,-40 196,-40 196,-28 196,-28 196,-22 202,-16 208,-16 208,-16 238,-16 238,-16 244,-16 250,-22 250,-28 250,-28 250,-40 250,-40 250,-46 244,-52 238,-52"/>
+<text text-anchor="middle" x="223" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#000000">c</text>
+</a>
+</g>
+</g>
+<!-- nfd80569436d14e3b8d7904db6266aeb6&#45;&gt;n78334cca8be544b5b2d072c64b35aae6 -->
+<g id="edge2" class="edge">
+<title>nfd80569436d14e3b8d7904db6266aeb6&#45;&gt;n78334cca8be544b5b2d072c64b35aae6</title>
+<path fill="none" stroke="#000000" d="M160.003,-34C168.0277,-34 176.9665,-34 185.5309,-34"/>
+<polygon fill="#000000" stroke="#000000" points="185.7051,-37.5001 195.705,-34 185.705,-30.5001 185.7051,-37.5001"/>
+</g>
+</g>
+</svg>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sg1</span> <span class="o">=</span> <span class="p">(</span><span class="n">seq_cluster</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span> <span class="s1">&#39;clust1&#39;</span><span class="p">))</span>
+<span class="n">sg2</span> <span class="o">=</span> <span class="p">(</span><span class="n">seq_cluster</span><span class="p">([</span><span class="s1">&#39;a1&#39;</span><span class="p">,</span><span class="s1">&#39;a2&#39;</span><span class="p">,</span><span class="n">sg1</span><span class="p">],</span> <span class="s1">&#39;clust2&#39;</span><span class="p">))</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">Dot</span><span class="p">()</span>
+<span class="n">g</span><span class="o">.</span><span class="n">add_items</span><span class="p">(</span><span class="n">sg2</span><span class="p">)</span>
+<span class="n">g</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_svg output_subarea output_execute_result">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: G Pages: 1 -->
+<svg width="462pt" height="138pt"
+ viewBox="0.00 0.00 462.00 138.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 134)">
+<title>G</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-134 458,-134 458,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_n63f6ef0c4d554fa18db6dd117d712e04</title>
+<g id="a_clust1"><a xlink:title="clust2">
+<path fill="#555555" fill-opacity="0.133333" stroke="#000000" d="M20,-8C20,-8 434,-8 434,-8 440,-8 446,-14 446,-20 446,-20 446,-110 446,-110 446,-116 440,-122 434,-122 434,-122 20,-122 20,-122 14,-122 8,-116 8,-110 8,-110 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="227" y="-106.8" font-family="Times,serif" font-size="14.00" fill="#000000">clust2</text>
+</a>
+</g>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_ne59a5ac5236949998aaefbe9ecceceae</title>
+<g id="a_clust2"><a xlink:title="clust1">
+<path fill="#555555" fill-opacity="0.133333" stroke="#000000" d="M200,-16C200,-16 426,-16 426,-16 432,-16 438,-22 438,-28 438,-28 438,-79 438,-79 438,-85 432,-91 426,-91 426,-91 200,-91 200,-91 194,-91 188,-85 188,-79 188,-79 188,-28 188,-28 188,-22 194,-16 200,-16"/>
+<text text-anchor="middle" x="313" y="-75.8" font-family="Times,serif" font-size="14.00" fill="#000000">clust1</text>
+</a>
+</g>
+</g>
+<!-- ndfa0997c4d2e4f82b427e268b40da49f -->
+<g id="node1" class="node">
+<title>ndfa0997c4d2e4f82b427e268b40da49f</title>
+<g id="a_node1"><a xlink:title="a1">
+<path fill="#00fe2a" fill-opacity="0.560784" stroke="#000000" d="M58,-60C58,-60 28,-60 28,-60 22,-60 16,-54 16,-48 16,-48 16,-36 16,-36 16,-30 22,-24 28,-24 28,-24 58,-24 58,-24 64,-24 70,-30 70,-36 70,-36 70,-48 70,-48 70,-54 64,-60 58,-60"/>
+<text text-anchor="middle" x="43" y="-38.3" font-family="Times,serif" font-size="14.00" fill="#000000">a1</text>
+</a>
+</g>
+</g>
+<!-- nb618ad9180a34219ab24ffaf72faf6ba -->
+<g id="node2" class="node">
+<title>nb618ad9180a34219ab24ffaf72faf6ba</title>
+<g id="a_node2"><a xlink:title="a2">
+<path fill="#00298b" fill-opacity="0.580392" stroke="#000000" d="M148,-60C148,-60 118,-60 118,-60 112,-60 106,-54 106,-48 106,-48 106,-36 106,-36 106,-30 112,-24 118,-24 118,-24 148,-24 148,-24 154,-24 160,-30 160,-36 160,-36 160,-48 160,-48 160,-54 154,-60 148,-60"/>
+<text text-anchor="middle" x="133" y="-38.3" font-family="Times,serif" font-size="14.00" fill="#000000">a2</text>
+</a>
+</g>
+</g>
+<!-- ndfa0997c4d2e4f82b427e268b40da49f&#45;&gt;nb618ad9180a34219ab24ffaf72faf6ba -->
+<g id="edge3" class="edge">
+<title>ndfa0997c4d2e4f82b427e268b40da49f&#45;&gt;nb618ad9180a34219ab24ffaf72faf6ba</title>
+<path fill="none" stroke="#000000" d="M70.003,-42C78.0277,-42 86.9665,-42 95.5309,-42"/>
+<polygon fill="#000000" stroke="#000000" points="95.7051,-45.5001 105.705,-42 95.705,-38.5001 95.7051,-45.5001"/>
+</g>
+<!-- nfc0dd3e43b0e401fb2609226d0955f0c -->
+<g id="node3" class="node">
+<title>nfc0dd3e43b0e401fb2609226d0955f0c</title>
+<g id="a_node3"><a xlink:title="a">
+<path fill="#ffc40a" fill-opacity="0.486275" stroke="#000000" d="M238,-60C238,-60 208,-60 208,-60 202,-60 196,-54 196,-48 196,-48 196,-36 196,-36 196,-30 202,-24 208,-24 208,-24 238,-24 238,-24 244,-24 250,-30 250,-36 250,-36 250,-48 250,-48 250,-54 244,-60 238,-60"/>
+<text text-anchor="middle" x="223" y="-38.3" font-family="Times,serif" font-size="14.00" fill="#000000">a</text>
+</a>
+</g>
+</g>
+<!-- nb618ad9180a34219ab24ffaf72faf6ba&#45;&gt;nfc0dd3e43b0e401fb2609226d0955f0c -->
+<g id="edge4" class="edge">
+<title>nb618ad9180a34219ab24ffaf72faf6ba&#45;&gt;nfc0dd3e43b0e401fb2609226d0955f0c</title>
+<path fill="none" stroke="#000000" d="M160.003,-42C168.0277,-42 176.9665,-42 185.5309,-42"/>
+<polygon fill="#000000" stroke="#000000" points="178.0001,-45.5004 188,-42 177.9999,-38.5004 178.0001,-45.5004"/>
+</g>
+<!-- ncd8b973cedcb4b7486b727d69ca97d4c -->
+<g id="node4" class="node">
+<title>ncd8b973cedcb4b7486b727d69ca97d4c</title>
+<g id="a_node4"><a xlink:title="b">
+<path fill="#00580f" fill-opacity="0.364706" stroke="#000000" d="M328,-60C328,-60 298,-60 298,-60 292,-60 286,-54 286,-48 286,-48 286,-36 286,-36 286,-30 292,-24 298,-24 298,-24 328,-24 328,-24 334,-24 340,-30 340,-36 340,-36 340,-48 340,-48 340,-54 334,-60 328,-60"/>
+<text text-anchor="middle" x="313" y="-38.3" font-family="Times,serif" font-size="14.00" fill="#000000">b</text>
+</a>
+</g>
+</g>
+<!-- nfc0dd3e43b0e401fb2609226d0955f0c&#45;&gt;ncd8b973cedcb4b7486b727d69ca97d4c -->
+<g id="edge1" class="edge">
+<title>nfc0dd3e43b0e401fb2609226d0955f0c&#45;&gt;ncd8b973cedcb4b7486b727d69ca97d4c</title>
+<path fill="none" stroke="#000000" d="M250.003,-42C258.0277,-42 266.9665,-42 275.5309,-42"/>
+<polygon fill="#000000" stroke="#000000" points="275.7051,-45.5001 285.705,-42 275.705,-38.5001 275.7051,-45.5001"/>
+</g>
+<!-- n648a4a91060b42178f02db20ada5ff3a -->
+<g id="node5" class="node">
+<title>n648a4a91060b42178f02db20ada5ff3a</title>
+<g id="a_node5"><a xlink:title="c">
+<path fill="#ffbc0d" fill-opacity="0.317647" stroke="#000000" d="M418,-60C418,-60 388,-60 388,-60 382,-60 376,-54 376,-48 376,-48 376,-36 376,-36 376,-30 382,-24 388,-24 388,-24 418,-24 418,-24 424,-24 430,-30 430,-36 430,-36 430,-48 430,-48 430,-54 424,-60 418,-60"/>
+<text text-anchor="middle" x="403" y="-38.3" font-family="Times,serif" font-size="14.00" fill="#000000">c</text>
+</a>
+</g>
+</g>
+<!-- ncd8b973cedcb4b7486b727d69ca97d4c&#45;&gt;n648a4a91060b42178f02db20ada5ff3a -->
+<g id="edge2" class="edge">
+<title>ncd8b973cedcb4b7486b727d69ca97d4c&#45;&gt;n648a4a91060b42178f02db20ada5ff3a</title>
+<path fill="none" stroke="#000000" d="M340.003,-42C348.0277,-42 356.9665,-42 365.5309,-42"/>
+<polygon fill="#000000" stroke="#000000" points="365.7051,-45.5001 375.705,-42 365.705,-38.5001 365.7051,-45.5001"/>
+</g>
+</g>
+</svg>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Experiments-with-data-structures">Experiments with data structures<a class="anchor-link" href="#Experiments-with-data-structures">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="draw_graph" class="doc_header"><code>draw_graph</code><a href="https://github.com/fastai/fastgraph/tree/master/fastgraph/drawgraph.py#L142" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>draw_graph</code>(<strong><code>graph</code></strong>, <strong><code>items</code></strong>=<em><code>None</code></em>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">items</span> <span class="o">=</span> <span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">D</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="s1">&#39;Aa&#39;</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="s1">&#39;Bb&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;Cc&#39;</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;Dd&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+<span class="n">graph</span> <span class="o">=</span> <span class="n">L</span><span class="p">((</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">),</span> <span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">C</span><span class="p">),</span> <span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">D</span><span class="p">),</span> <span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="n">C</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">draw_graph</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_svg output_subarea output_execute_result">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: G Pages: 1 -->
+<svg width="242pt" height="116pt"
+ viewBox="0.00 0.00 242.00 116.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
+<title>G</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-112 238,-112 238,4 -4,4"/>
+<!-- n52aee2e98f9a4c55bbfd4c1319ddc230 -->
+<g id="node1" class="node">
+<title>n52aee2e98f9a4c55bbfd4c1319ddc230</title>
+<g id="a_node1"><a xlink:title="Aa">
+<path fill="#ffc40a" fill-opacity="0.486275" stroke="#000000" d="M42,-72C42,-72 12,-72 12,-72 6,-72 0,-66 0,-60 0,-60 0,-48 0,-48 0,-42 6,-36 12,-36 12,-36 42,-36 42,-36 48,-36 54,-42 54,-48 54,-48 54,-60 54,-60 54,-66 48,-72 42,-72"/>
+<text text-anchor="middle" x="27" y="-50.3" font-family="Times,serif" font-size="14.00" fill="#000000">a</text>
+</a>
+</g>
+</g>
+<!-- nfdfc95c541094861b62ea07471fd098f -->
+<g id="node2" class="node">
+<title>nfdfc95c541094861b62ea07471fd098f</title>
+<g id="a_node2"><a xlink:title="Bb">
+<path fill="#00580f" fill-opacity="0.364706" stroke="#000000" d="M132,-108C132,-108 102,-108 102,-108 96,-108 90,-102 90,-96 90,-96 90,-84 90,-84 90,-78 96,-72 102,-72 102,-72 132,-72 132,-72 138,-72 144,-78 144,-84 144,-84 144,-96 144,-96 144,-102 138,-108 132,-108"/>
+<text text-anchor="middle" x="117" y="-86.3" font-family="Times,serif" font-size="14.00" fill="#000000">b</text>
+</a>
+</g>
+</g>
+<!-- n52aee2e98f9a4c55bbfd4c1319ddc230&#45;&gt;nfdfc95c541094861b62ea07471fd098f -->
+<g id="edge1" class="edge">
+<title>n52aee2e98f9a4c55bbfd4c1319ddc230&#45;&gt;nfdfc95c541094861b62ea07471fd098f</title>
+<path fill="none" stroke="#000000" d="M54.003,-64.8012C62.2922,-68.1169 71.5569,-71.8228 80.3766,-75.3506"/>
+<polygon fill="#000000" stroke="#000000" points="79.1204,-78.6177 89.705,-79.082 81.7201,-72.1184 79.1204,-78.6177"/>
+</g>
+<!-- n90e8b91ae2ec4fc696b9831737e4027b -->
+<g id="node3" class="node">
+<title>n90e8b91ae2ec4fc696b9831737e4027b</title>
+<g id="a_node3"><a xlink:title="Cc">
+<path fill="#ffbc0d" fill-opacity="0.317647" stroke="#000000" d="M132,-36C132,-36 102,-36 102,-36 96,-36 90,-30 90,-24 90,-24 90,-12 90,-12 90,-6 96,0 102,0 102,0 132,0 132,0 138,0 144,-6 144,-12 144,-12 144,-24 144,-24 144,-30 138,-36 132,-36"/>
+<text text-anchor="middle" x="117" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">c</text>
+</a>
+</g>
+</g>
+<!-- n52aee2e98f9a4c55bbfd4c1319ddc230&#45;&gt;n90e8b91ae2ec4fc696b9831737e4027b -->
+<g id="edge2" class="edge">
+<title>n52aee2e98f9a4c55bbfd4c1319ddc230&#45;&gt;n90e8b91ae2ec4fc696b9831737e4027b</title>
+<path fill="none" stroke="#000000" d="M54.003,-43.1988C62.2922,-39.8831 71.5569,-36.1772 80.3766,-32.6494"/>
+<polygon fill="#000000" stroke="#000000" points="81.7201,-35.8816 89.705,-28.918 79.1204,-29.3823 81.7201,-35.8816"/>
+</g>
+<!-- n8b64458bfe21403b95c840b7222c924b -->
+<g id="node4" class="node">
+<title>n8b64458bfe21403b95c840b7222c924b</title>
+<g id="a_node4"><a xlink:title="Dd">
+<path fill="#fff500" fill-opacity="0.470588" stroke="#000000" d="M222,-108C222,-108 192,-108 192,-108 186,-108 180,-102 180,-96 180,-96 180,-84 180,-84 180,-78 186,-72 192,-72 192,-72 222,-72 222,-72 228,-72 234,-78 234,-84 234,-84 234,-96 234,-96 234,-102 228,-108 222,-108"/>
+<text text-anchor="middle" x="207" y="-86.3" font-family="Times,serif" font-size="14.00" fill="#000000">d</text>
+</a>
+</g>
+</g>
+<!-- nfdfc95c541094861b62ea07471fd098f&#45;&gt;n8b64458bfe21403b95c840b7222c924b -->
+<g id="edge3" class="edge">
+<title>nfdfc95c541094861b62ea07471fd098f&#45;&gt;n8b64458bfe21403b95c840b7222c924b</title>
+<path fill="none" stroke="#000000" d="M144.003,-90C152.0277,-90 160.9665,-90 169.5309,-90"/>
+<polygon fill="#000000" stroke="#000000" points="169.7051,-93.5001 179.705,-90 169.705,-86.5001 169.7051,-93.5001"/>
+</g>
+<!-- n90e8b91ae2ec4fc696b9831737e4027b&#45;&gt;n90e8b91ae2ec4fc696b9831737e4027b -->
+<g id="edge4" class="edge">
+<title>n90e8b91ae2ec4fc696b9831737e4027b&#45;&gt;n90e8b91ae2ec4fc696b9831737e4027b</title>
+<path fill="none" stroke="#000000" d="M100.7183,-36.1527C98.2134,-45.5391 103.6406,-54 117,-54 125.1409,-54 130.3362,-50.8581 132.5861,-46.2796"/>
+<polygon fill="#000000" stroke="#000000" points="136.0881,-46.3691 133.2817,-36.1527 129.1046,-45.8893 136.0881,-46.3691"/>
+</g>
+</g>
+</svg>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">graph</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="p">[]),</span>
+    <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="s1">&#39;c&#39;</span><span class="p">}),</span>
+    <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">])</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 

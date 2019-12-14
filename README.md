@@ -28,25 +28,10 @@ You can create a `pydot` `Cluster` from any list. If items are 2-tuples, then th
 <div class="input_area" markdown="1">
 
 ```python
-lbls = 'conv','norm','act'
-```
-
-</div>
-
-</div>
-<div class="codecell" markdown="1">
-<div class="input_area" markdown="1">
-
-```python
-g = create_graph()
-sg1 = create_net_graph(g, 'cl1', lbls)
-sg2 = create_net_graph(g, 'cl2', lbls)
-# Connect a cluster to a cluster
-g.connect_items(sg1, sg2)
-# Connect a cluster to a node
-g.connect_items(sg1, sg2[-1])
-# Connect a node to a node
-g.connect_items(sg1[0], sg1[0])
+sg1 = (seq_cluster(['a','b','c'], 'clust1'))
+sg2 = (seq_cluster(['a1','a2',sg1], 'clust2'))
+g = Dot()
+g.add_items(sg2)
 g
 ```
 
@@ -56,7 +41,7 @@ g
 
 
 
-![svg](output_6_0.svg)
+![svg](output_5_0.svg)
 
 
 
