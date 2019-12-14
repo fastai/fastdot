@@ -19,9 +19,9 @@ This is still under early development - not ready for general use.
 
 `pip install fastdot`
 
-## drawgraph overview
+## fastdot overview
 
-`drawgraph` is a simple wrapper over `pydot`, which patches some useful functionality directly into `pydot` classes, as well as adding some new functions.
+`fastdot` is a simple wrapper over `pydot`, which patches some useful functionality directly into `pydot` classes, as well as adding some new functions.
 
 You can create a `pydot` `Cluster` from any list. If items are 2-tuples, then the first item is the label, the second is the tooltip. Otherwise, there will be no tooltips.
 <div class="codecell" markdown="1">
