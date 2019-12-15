@@ -10,7 +10,7 @@
 
 # fastdot
 
-> Draw, modify, and execute graphs using a simple python dict interface
+> A simple wrapper over `pydot` which fixes some sharp edges
 
 
 This is still under early development - not ready for general use.

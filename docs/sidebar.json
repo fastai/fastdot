@@ -1,6 +1,7 @@
 {
   "fastdot": {
     "Overview": "/",
-    "fastdot.core": "/core"
+    "fastdot.core": "/core",
+    "Title": "/graphs"
   }
 }

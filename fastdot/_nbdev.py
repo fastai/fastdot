@@ -16,10 +16,14 @@ index = {"Dot": "00_core.ipynb",
          "pydot.Graph.add_items": "00_core.ipynb",
          "pydot.Graph.first": "00_core.ipynb",
          "pydot.Graph.last": "00_core.ipynb",
+         "pydot.Node.with_compass": "00_core.ipynb",
+         "pydot.Graph.with_compass": "00_core.ipynb",
          "pydot.Node.connect": "00_core.ipynb",
          "pydot.Graph.connect": "00_core.ipynb",
-         "pydot.Graph.seq_edges": "00_core.ipynb",
-         "seq_cluster": "00_core.ipynb"}
+         "graph_edges_seq": "00_core.ipynb",
+         "pydot.Graph.add_edges_seq": "00_core.ipynb",
+         "seq_cluster": "00_core.ipynb",
+         "Point": "00_core.ipynb"}
 
 modules = ["core.py"]
 
