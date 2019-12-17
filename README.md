@@ -13,6 +13,8 @@
 > A simple wrapper over `pydot` to make it more consistent, unsurprising, and pythonic
 
 
+Acknowledgement: `fastdot` is heavily influenced by work from [David Page](https://github.com/davidcpage/), who built a system for drawing graphs based on a highly flexible data structure he designed. It may turn out that his library, when complete, will make it even easier to do the things described here (and his data structure also supports a lot more than just drawing)!
+
 ## Install
 
 `pip install fastdot`
@@ -52,7 +54,7 @@ g
 
 
 
-![svg](output_6_0.svg)
+![svg](output_7_0.svg)
 
 
 
@@ -86,7 +88,7 @@ g
 
 
 
-![svg](output_11_0.svg)
+![svg](output_12_0.svg)
 
 
 
@@ -160,7 +162,7 @@ graph_items(c1,c2,e1,e2)
 
 
 
-![svg](output_21_0.svg)
+![svg](output_22_0.svg)
 
 
 
@@ -226,7 +228,7 @@ g
 
 
 
-![svg](output_29_0.svg)
+![svg](output_30_0.svg)
 
 
 
@@ -250,7 +252,7 @@ g
 
 
 
-![svg](output_31_0.svg)
+![svg](output_32_0.svg)
 
 
 
