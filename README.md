@@ -10,10 +10,8 @@
 
 # fastdot
 
-> A simple wrapper over `pydot` which fixes some sharp edges
+> A simple wrapper over `pydot` to make it more consistent, unsurprising, and pythonic
 
-
-This is still under early development - not ready for general use.
 
 ## Install
 
@@ -21,17 +19,17 @@ This is still under early development - not ready for general use.
 
 ## fastdot overview
 
-`fastdot` is a simple wrapper over `pydot`, which patches some useful functionality directly into `pydot` classes, as well as adding some new functions.
+`fastdot` is a thin wrapper over the excellent [pydot](https://github.com/pydot/pydot) program (which is in turn a thin wrapper over the absolutely wonderful [Graphviz software](https://www.graphviz.org/)), designed to make it more consistent, unsurprising, and pythonic. An example of removing *surprise*: `pydot.Node('node')` gives an obscure compilation exception, since `node` is a keyword in the underlying `graphviz` program, whereas `fastdot.Node('node')` works just fine, due to auto-quoting.
 
-You can create a `pydot` `Cluster` from any list. If items are 2-tuples, then the first item is the label, the second is the tooltip. Otherwise, there will be no tooltips.
+In face, you never need to provide names in `fastdot`, and edges can be created directly between objects:
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
 ```python
-sg1 = (seq_cluster(['a','b','c'], 'clust1'))
-sg2 = (seq_cluster(['a1','a2',sg1], 'clust2'))
 g = Dot()
-g.add_items(sg2)
+a,b = g.add_items('a', 'b')
+g.add_item(a.connect(b))
+g.add_item(Node('Check tooltip', tooltip="I have a tooltip!"))
 g
 ```
 
@@ -41,7 +39,152 @@ g
 
 
 
-![svg](output_5_0.svg)
+![svg](output_4_0.svg)
+
+
+
+</div>
+
+</div>
+
+As you see, graphs know how to show themselves in Jupyter notebooks directly and can be exported to HTML (it uses SVG behind the scenes). Tooltips appear in both notebooks and exported HTML pages. Also, as shown above, you can just use `add_item` or `add_items`, regardless of the type of item.
+
+## Symbolic graphs
+
+`fastdot` is particularly designed to make it easier to create graphs symbolically - for instance, for Python dictionaries, PyTorch/TensorFlow models, and so forth. Here's a simple example with some mock neural network layers and sequential models. First, let's define our mock classes:
+<div class="codecell" markdown="1">
+<div class="input_area" markdown="1">
+
+```python
+@dataclass(frozen=True)
+class Layer:
+    name:str; n_filters:int=1
+
+class Linear(Layer): pass
+class Conv2d(Layer): pass
+
+@dataclass(frozen=True)
+class Sequential:
+    layers:list; name:str
+    def __hash__(self): return id(self)
+    def __repr__(self): return self.name
+```
+
+</div>
+
+</div>
+
+Here's our sequential blocks for our "model":
+<div class="codecell" markdown="1">
+<div class="input_area" markdown="1">
+
+```python
+block1 = Sequential([Conv2d('conv', 5), Linear('lin', 3)], 'block1')
+block2 = Sequential([Conv2d('conv1', 8), Conv2d('conv2', 2), Linear('lin')], 'block2')
+```
+
+</div>
+
+</div>
+
+`fastdot` can create all node properties directly from objects; you just have to define functions describing how to map the object's attributes to graph properties. These mappings go in the `node_defaults` and `cluster_defaults` dictionaries (although by default labels are set using `str()`, so we don't need any special cluster defaults in this case):
+<div class="codecell" markdown="1">
+<div class="input_area" markdown="1">
+
+```python
+node_defaults['fillcolor'] = lambda o: 'greenyellow' if isinstance(o,Linear) else 'pink'
+node_defaults['label'] = attrgetter('name')
+node_defaults['tooltip'] = str
+```
+
+</div>
+
+</div>
+
+With that in place, we can directly create nodes from our objects, for instance using the convenient `seq_cluster` function:
+<div class="codecell" markdown="1">
+<div class="input_area" markdown="1">
+
+```python
+c1 = seq_cluster(block1.layers, block1)
+c2 = seq_cluster(block2.layers, block2)
+e1,e2 = c1.connect(c2),c1.connect(c2.last())
+graph_items(c1,c2,e1,e2)
+```
+
+</div>
+<div class="output_area" markdown="1">
+
+
+
+
+![svg](output_14_0.svg)
+
+
+
+</div>
+
+</div>
+
+## Using object graphs
+
+In the above example, we defined our edges directly between `fastdot` objects. In practice, however, you'll most likely have your edges defined directly between python objects, for instance like this:
+<div class="codecell" markdown="1">
+<div class="input_area" markdown="1">
+
+```python
+conns = (
+    (block1, block2),
+    (block1, block2.layers[-1]),
+)
+```
+
+</div>
+
+</div>
+
+In this case, you'll want some way to connect your python objects to the `fastdot` graph items that represent them. A mapping is stored automatically by `fastdot`, and is made available through the `object2graph` function:
+<div class="codecell" markdown="1">
+<div class="input_area" markdown="1">
+
+```python
+g = Dot()
+g.add_items(seq_cluster(block1.layers, block1),
+            seq_cluster(block2.layers, block2))
+
+object2graph(block1.layers[-1])
+```
+
+</div>
+<div class="output_area" markdown="1">
+
+
+
+
+    <pydot.Node at 0x7f389abb9290>
+
+
+
+</div>
+
+</div>
+
+You can use this to graph your connections without needing access to the graph items:
+<div class="codecell" markdown="1">
+<div class="input_area" markdown="1">
+
+```python
+g.add_items(*[object2graph(a).connect(object2graph(b)) for a,b in conns])
+g
+```
+
+</div>
+<div class="output_area" markdown="1">
+
+
+
+
+![svg](output_21_0.svg)
 
 
 
