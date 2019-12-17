@@ -19,17 +19,19 @@
 
 ## fastdot overview
 
-`fastdot` is a thin wrapper over the excellent [pydot](https://github.com/pydot/pydot) program (which is in turn a thin wrapper over the absolutely wonderful [Graphviz software](https://www.graphviz.org/)), designed to make it more consistent, unsurprising, and pythonic. An example of removing *surprise*: `pydot.Node('node')` gives an obscure compilation exception, since `node` is a keyword in the underlying `graphviz` program, whereas `fastdot.Node('node')` works just fine, due to auto-quoting.
+`fastdot` is a thin wrapper over the excellent [pydot](https://github.com/pydot/pydot) program (which is in turn a thin wrapper over the absolutely wonderful [Graphviz software](https://www.graphviz.org/)), designed to make it more consistent, unsurprising, and pythonic. (An example of removing *surprise*: `pydot.Node('node')` gives an obscure compilation exception, since `node` is a keyword in the underlying `graphviz` program, whereas `fastdot.Node('node')` works just fine, due to auto-quoting.)
 
-In face, you never need to provide names in `fastdot`, and edges can be created directly between objects:
+In fact, you never need to provide names in `fastdot`; you can create edges directly between objects. Here's a quick example of some of the main functionality:
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
 ```python
 g = Dot()
-a,b = g.add_items('a', 'b')
-g.add_item(a.connect(b))
+c = Cluster('cl')
+a1,a2,b = c.add_items('a', 'a', 'b')
+c.add_items(a1.connect(a2), a2.connect(b))
 g.add_item(Node('Check tooltip', tooltip="I have a tooltip!"))
+g.add_item(c)
 g
 ```
 
@@ -66,8 +68,6 @@ class Conv2d(Layer): pass
 @dataclass(frozen=True)
 class Sequential:
     layers:list; name:str
-    def __hash__(self): return id(self)
-    def __repr__(self): return self.name
 ```
 
 </div>
@@ -79,8 +79,10 @@ Here's our sequential blocks for our "model":
 <div class="input_area" markdown="1">
 
 ```python
-block1 = Sequential([Conv2d('conv', 5), Linear('lin', 3)], 'block1')
-block2 = Sequential([Conv2d('conv1', 8), Conv2d('conv2', 2), Linear('lin')], 'block2')
+block1 = Sequential([Conv2d('conv', 5), Linear('lin', 3)],
+                    'block1')
+block2 = Sequential([Conv2d('conv1', 8), Conv2d('conv2', 2), Linear('lin')],
+                    'block2')
 ```
 
 </div>
@@ -93,7 +95,7 @@ block2 = Sequential([Conv2d('conv1', 8), Conv2d('conv2', 2), Linear('lin')], 'bl
 
 ```python
 node_defaults['fillcolor'] = lambda o: 'greenyellow' if isinstance(o,Linear) else 'pink'
-node_defaults['label'] = attrgetter('name')
+cluster_defaults['label'] = node_defaults['label'] = attrgetter('name')
 node_defaults['tooltip'] = str
 ```
 
@@ -125,6 +127,8 @@ graph_items(c1,c2,e1,e2)
 </div>
 
 </div>
+
+Note that in this example we didn't even need to create the `Dot` object separately - `graph_items` creates it directly from the graph items provided.
 
 ## Using object graphs
 
@@ -161,7 +165,7 @@ object2graph(block1.layers[-1])
 
 
 
-    <pydot.Node at 0x7f389abb9290>
+    <pydot.Node at 0x7fc5e06bea90>
 
 
 
@@ -174,7 +178,8 @@ You can use this to graph your connections without needing access to the graph i
 <div class="input_area" markdown="1">
 
 ```python
-g.add_items(*[object2graph(a).connect(object2graph(b)) for a,b in conns])
+g.add_items(*[object2graph(a).connect(object2graph(b))
+              for a,b in conns])
 g
 ```
 
@@ -184,7 +189,7 @@ g
 
 
 
-![svg](output_21_0.svg)
+![svg](output_22_0.svg)
 
 
 
