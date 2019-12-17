@@ -2,7 +2,7 @@
 
 __all__ = ['pydot', 'Dot', 'uniq_name', 'quote', 'graph_objects', 'object_names', 'add_mapping', 'node_defaults',
            'Node', 'object2graph', 'obj2node_color', 'graph_colors1', 'graph_colors2', 'cluster_defaults', 'Cluster',
-           'graph_items', 'graph_edges_seq', 'seq_cluster', 'Point']
+           'graph_items', 'object_connections', 'graph_edges_seq', 'seq_cluster', 'Point']
 
 #Cell
 from fastcore.all import *
@@ -157,6 +157,11 @@ def connect(self:(pydot.Node,pydot.Graph), item, compass1=None, compass2=None, *
         lhead=item.get_name()
     a,b = a.with_compass(compass1),b.with_compass(compass2)
     return pydot.Edge(a, b, lhead=lhead, ltail=ltail, **kwargs)
+
+#Cell
+def object_connections(conns):
+    "Create connections between all pairs in `conns`"
+    return [object2graph(a).connect(object2graph(b)) for a,b in conns]
 
 #Cell
 def graph_edges_seq(items):

@@ -19,15 +19,15 @@
 
 ## fastdot overview
 
-`fastdot` is a thin wrapper over the excellent [pydot](https://github.com/pydot/pydot) program (which is in turn a thin wrapper over the absolutely wonderful [Graphviz software](https://www.graphviz.org/)), designed to make it more consistent, unsurprising, and pythonic. (An example of removing *surprise*: `pydot.Node('node')` gives an obscure compilation exception, since `node` is a keyword in the underlying `graphviz` program, whereas `fastdot.Node('node')` works just fine, due to auto-quoting.)
+`fastdot` is a thin wrapper over the excellent [pydot](https://github.com/pydot/pydot) program (which is in turn a thin wrapper over the absolutely wonderful [Graphviz software](https://www.graphviz.org/)), designed to make it more consistent, unsurprising, and pythonic. (An example of removing *surprise*: `pydot.Node('node')` gives an obscure compilation exception, since `node` is a keyword in the underlying `graphviz` program, whereas `fastdot.Node('node')` works just fine, due to auto-quoting.) In fact, you never need to provide names in `fastdot`; you can create edges directly between objects.
 
-In fact, you never need to provide names in `fastdot`; you can create edges directly between objects. Here's a quick example of some of the main functionality:
+Here's a quick example of some of the main functionality:
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
 ```python
 g = Dot()
-c = Cluster('cl')
+c = Cluster('cl', fillcolor='pink')
 a1,a2,b = c.add_items('a', 'a', 'b')
 c.add_items(a1.connect(a2), a2.connect(b))
 g.add_item(Node('Check tooltip', tooltip="I have a tooltip!"))
@@ -41,7 +41,7 @@ g
 
 
 
-![svg](output_4_0.svg)
+![svg](output_5_0.svg)
 
 
 
@@ -49,7 +49,7 @@ g
 
 </div>
 
-As you see, graphs know how to show themselves in Jupyter notebooks directly and can be exported to HTML (it uses SVG behind the scenes). Tooltips appear in both notebooks and exported HTML pages. Also, as shown above, you can just use `add_item` or `add_items`, regardless of the type of item.
+As you see, graphs know how to show themselves in Jupyter notebooks directly and can be exported to HTML (it uses SVG behind the scenes). Tooltips appear in both notebooks and exported HTML pages. Nodes with the same label, by default, are set to the same color. Also, as shown above, you can just use `add_item` or `add_items`, regardless of the type of item.
 
 ## Symbolic graphs
 
@@ -59,15 +59,12 @@ As you see, graphs know how to show themselves in Jupyter notebooks directly and
 
 ```python
 @dataclass(frozen=True)
-class Layer:
-    name:str; n_filters:int=1
-
+class Layer: name:str; n_filters:int=1
 class Linear(Layer): pass
 class Conv2d(Layer): pass
 
 @dataclass(frozen=True)
-class Sequential:
-    layers:list; name:str
+class Sequential: layers:list; name:str
 ```
 
 </div>
@@ -79,10 +76,8 @@ Here's our sequential blocks for our "model":
 <div class="input_area" markdown="1">
 
 ```python
-block1 = Sequential([Conv2d('conv', 5), Linear('lin', 3)],
-                    'block1')
-block2 = Sequential([Conv2d('conv1', 8), Conv2d('conv2', 2), Linear('lin')],
-                    'block2')
+block1 = Sequential([Conv2d('conv', 5), Linear('lin', 3)], 'block1')
+block2 = Sequential([Conv2d('conv1', 8), Conv2d('conv2', 2), Linear('lin')], 'block2')
 ```
 
 </div>
@@ -120,7 +115,7 @@ graph_items(c1,c2,e1,e2)
 
 
 
-![svg](output_14_0.svg)
+![svg](output_15_0.svg)
 
 
 
@@ -152,10 +147,7 @@ In this case, you'll want some way to connect your python objects to the `fastdo
 <div class="input_area" markdown="1">
 
 ```python
-g = Dot()
-g.add_items(seq_cluster(block1.layers, block1),
-            seq_cluster(block2.layers, block2))
-
+g = graph_items(seq_cluster(block1.layers, block1), seq_cluster(block2.layers, block2))
 object2graph(block1.layers[-1])
 ```
 
@@ -165,7 +157,7 @@ object2graph(block1.layers[-1])
 
 
 
-    <pydot.Node at 0x7fc5e06bea90>
+    <pydot.Node at 0x7f013180c310>
 
 
 
@@ -189,7 +181,31 @@ g
 
 
 
-![svg](output_22_0.svg)
+![svg](output_23_0.svg)
+
+
+
+</div>
+
+</div>
+
+There's a helper function, `object_connections`, which creates these connections for you. So the above can be simplified to:
+<div class="codecell" markdown="1">
+<div class="input_area" markdown="1">
+
+```python
+g = graph_items(seq_cluster(block1.layers, block1), seq_cluster(block2.layers, block2))
+g.add_items(*object_connections(conns))
+g
+```
+
+</div>
+<div class="output_area" markdown="1">
+
+
+
+
+![svg](output_25_0.svg)
 
 
 
