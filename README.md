@@ -17,6 +17,37 @@
 
 `pip install fastdot`
 
+## Synopsis
+<div class="codecell" markdown="1">
+<div class="input_area" markdown="1">
+
+```python
+layers1 = ['conv','conv','lin']
+layers2 = ['conv','lin']
+block1,block2 = ['block1','block2']
+conns = ((block1, block2),
+         (block1, layers2[-1]))
+
+g = graph_items(seq_cluster(layers1, block1),
+                seq_cluster(layers2, block2))
+g.add_items(*object_connections(conns))
+g
+```
+
+</div>
+<div class="output_area" markdown="1">
+
+
+
+
+![svg](output_3_0.svg)
+
+
+
+</div>
+
+</div>
+
 ## fastdot overview
 
 `fastdot` is a thin wrapper over the excellent [pydot](https://github.com/pydot/pydot) program (which is in turn a thin wrapper over the absolutely wonderful [Graphviz software](https://www.graphviz.org/)), designed to make it more consistent, unsurprising, and pythonic. (An example of removing *surprise*: `pydot.Node('node')` gives an obscure compilation exception, since `node` is a keyword in the underlying `graphviz` program, whereas `fastdot.Node('node')` works just fine, due to auto-quoting.) In fact, you never need to provide names in `fastdot`; you can create edges directly between objects.
@@ -41,7 +72,7 @@ g
 
 
 
-![svg](output_5_0.svg)
+![svg](output_7_0.svg)
 
 
 
@@ -115,7 +146,7 @@ graph_items(c1,c2,e1,e2)
 
 
 
-![svg](output_15_0.svg)
+![svg](output_17_0.svg)
 
 
 
@@ -181,7 +212,7 @@ g
 
 
 
-![svg](output_23_0.svg)
+![svg](output_25_0.svg)
 
 
 
@@ -205,7 +236,7 @@ g
 
 
 
-![svg](output_25_0.svg)
+![svg](output_27_0.svg)
 
 
 
