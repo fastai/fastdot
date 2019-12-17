@@ -18,6 +18,8 @@
 `pip install fastdot`
 
 ## Synopsis
+
+Start with some data representing objects and connections between them (e.g. they wouldn't normally be just strings like in this example, but would be neural net layers, or users and products, or car trips, etc):
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
@@ -27,7 +29,17 @@ layers2 = ['conv','lin']
 block1,block2 = ['block1','block2']
 conns = ((block1, block2),
          (block1, layers2[-1]))
+```
 
+</div>
+
+</div>
+
+Then map them directly to a visual respresentation:
+<div class="codecell" markdown="1">
+<div class="input_area" markdown="1">
+
+```python
 g = graph_items(seq_cluster(layers1, block1),
                 seq_cluster(layers2, block2))
 g.add_items(*object_connections(conns))
@@ -40,13 +52,15 @@ g
 
 
 
-![svg](output_3_0.svg)
+![svg](output_6_0.svg)
 
 
 
 </div>
 
 </div>
+
+See the *symbolic graphs* and *object graphs* sections below for a more complete example.
 
 ## fastdot overview
 
@@ -72,7 +86,7 @@ g
 
 
 
-![svg](output_7_0.svg)
+![svg](output_11_0.svg)
 
 
 
@@ -146,7 +160,7 @@ graph_items(c1,c2,e1,e2)
 
 
 
-![svg](output_17_0.svg)
+![svg](output_21_0.svg)
 
 
 
@@ -212,7 +226,7 @@ g
 
 
 
-![svg](output_25_0.svg)
+![svg](output_29_0.svg)
 
 
 
@@ -236,7 +250,7 @@ g
 
 
 
-![svg](output_27_0.svg)
+![svg](output_31_0.svg)
 
 
 

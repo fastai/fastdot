@@ -40,6 +40,13 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Start with some data representing objects and connections between them (e.g. they wouldn't normally be just strings like in this example, but would be neural net layers, or users and products, or car trips, etc):</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -50,8 +57,26 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 <span class="n">block1</span><span class="p">,</span><span class="n">block2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;block1&#39;</span><span class="p">,</span><span class="s1">&#39;block2&#39;</span><span class="p">]</span>
 <span class="n">conns</span> <span class="o">=</span> <span class="p">((</span><span class="n">block1</span><span class="p">,</span> <span class="n">block2</span><span class="p">),</span>
          <span class="p">(</span><span class="n">block1</span><span class="p">,</span> <span class="n">layers2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
 
-<span class="n">g</span> <span class="o">=</span> <span class="n">graph_items</span><span class="p">(</span><span class="n">seq_cluster</span><span class="p">(</span><span class="n">layers1</span><span class="p">,</span> <span class="n">block1</span><span class="p">),</span>
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Then map them directly to a visual respresentation:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">graph_items</span><span class="p">(</span><span class="n">seq_cluster</span><span class="p">(</span><span class="n">layers1</span><span class="p">,</span> <span class="n">block1</span><span class="p">),</span>
                 <span class="n">seq_cluster</span><span class="p">(</span><span class="n">layers2</span><span class="p">,</span> <span class="n">block2</span><span class="p">))</span>
 <span class="n">g</span><span class="o">.</span><span class="n">add_items</span><span class="p">(</span><span class="o">*</span><span class="n">object_connections</span><span class="p">(</span><span class="n">conns</span><span class="p">))</span>
 <span class="n">g</span>
@@ -180,6 +205,13 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>See the <em>symbolic graphs</em> and <em>object graphs</em> sections below for a more complete example.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
