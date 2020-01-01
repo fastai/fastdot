@@ -54,7 +54,7 @@ g
 
 
 
-![svg]\(docs/images/output_7_0.svg\)
+![svg]\(docs/images/output_7_0.svg)
 
 
 
