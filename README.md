@@ -54,7 +54,7 @@ g
 
 
 
-![svg]\(docs/images/output_7_0.svg\)
+![svg](docs/images/output_7_0.svg)
 
 
 
@@ -88,7 +88,7 @@ g
 
 
 
-![svg]\(docs/images/output_12_0.svg\)
+![svg](docs/images/output_12_0.svg)
 
 
 
@@ -162,7 +162,7 @@ graph_items(c1,c2,e1,e2)
 
 
 
-![svg]\(docs/images/output_22_0.svg\)
+![svg](docs/images/output_22_0.svg)
 
 
 
@@ -228,7 +228,7 @@ g
 
 
 
-![svg]\(docs/images/output_30_0.svg\)
+![svg](docs/images/output_30_0.svg)
 
 
 
@@ -252,7 +252,7 @@ g
 
 
 
-![svg]\(docs/images/output_32_0.svg\)
+![svg](docs/images/output_32_0.svg)
 
 
 
