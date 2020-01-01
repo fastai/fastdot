@@ -1,6 +1,7 @@
 ---
 
 title: fastdot
+
 keywords: fastai
 sidebar: home_sidebar
 
@@ -405,7 +406,7 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>fastdot</code> can create all node properties directly from objects; you just have to define functions describing how to map the object's attributes to graph properties. These mappings go in the <a href="core.html#node_defaults"><code>node_defaults</code></a> and <a href="core.html#cluster_defaults"><code>cluster_defaults</code></a> dictionaries (although by default labels are set using <code>str()</code>, so we don't need any special cluster defaults in this case):</p>
+<p><code>fastdot</code> can create all node properties directly from objects; you just have to define functions describing how to map the object's attributes to graph properties. These mappings go in the <a href="/fastdot/core#node_defaults"><code>node_defaults</code></a> and <a href="/fastdot/core#cluster_defaults"><code>cluster_defaults</code></a> dictionaries (although by default labels are set using <code>str()</code>, so we don't need any special cluster defaults in this case):</p>
 
 </div>
 </div>
@@ -427,7 +428,7 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>With that in place, we can directly create nodes from our objects, for instance using the convenient <a href="core.html#seq_cluster"><code>seq_cluster</code></a> function:</p>
+<p>With that in place, we can directly create nodes from our objects, for instance using the convenient <a href="/fastdot/core#seq_cluster"><code>seq_cluster</code></a> function:</p>
 
 </div>
 </div>
@@ -569,7 +570,7 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that in this example we didn't even need to create the <a href="core.html#Dot"><code>Dot</code></a> object separately - <a href="core.html#graph_items"><code>graph_items</code></a> creates it directly from the graph items provided.</p>
+<p>Note that in this example we didn't even need to create the <a href="/fastdot/core#Dot"><code>Dot</code></a> object separately - <a href="/fastdot/core#graph_items"><code>graph_items</code></a> creates it directly from the graph items provided.</p>
 
 </div>
 </div>
@@ -605,7 +606,7 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In this case, you'll want some way to connect your python objects to the <code>fastdot</code> graph items that represent them. A mapping is stored automatically by <code>fastdot</code>, and is made available through the <a href="core.html#object2graph"><code>object2graph</code></a> function:</p>
+<p>In this case, you'll want some way to connect your python objects to the <code>fastdot</code> graph items that represent them. A mapping is stored automatically by <code>fastdot</code>, and is made available through the <a href="/fastdot/core#object2graph"><code>object2graph</code></a> function:</p>
 
 </div>
 </div>
@@ -783,7 +784,7 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There's a helper function, <a href="core.html#object_connections"><code>object_connections</code></a>, which creates these connections for you. So the above can be simplified to:</p>
+<p>There's a helper function, <a href="/fastdot/core#object_connections"><code>object_connections</code></a>, which creates these connections for you. So the above can be simplified to:</p>
 
 </div>
 </div>

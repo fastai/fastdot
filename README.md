@@ -25,7 +25,7 @@ Start with some data representing objects and connections between them (e.g. the
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```python
+```
 layers1 = ['conv','conv','lin']
 layers2 = ['conv','lin']
 block1,block2 = ['block1','block2']
@@ -41,7 +41,7 @@ Then map them directly to a visual respresentation:
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```python
+```
 g = graph_items(seq_cluster(layers1, block1),
                 seq_cluster(layers2, block2))
 g.add_items(*object_connections(conns))
@@ -54,7 +54,7 @@ g
 
 
 
-![svg](output_7_0.svg)
+![svg]\(docs/images/output_7_0.svg\)
 
 
 
@@ -72,7 +72,7 @@ Here's a quick example of some of the main functionality:
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```python
+```
 g = Dot()
 c = Cluster('cl', fillcolor='pink')
 a1,a2,b = c.add_items('a', 'a', 'b')
@@ -88,7 +88,7 @@ g
 
 
 
-![svg](output_12_0.svg)
+![svg]\(docs/images/output_12_0.svg\)
 
 
 
@@ -104,7 +104,7 @@ As you see, graphs know how to show themselves in Jupyter notebooks directly and
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```python
+```
 @dataclass(frozen=True)
 class Layer: name:str; n_filters:int=1
 class Linear(Layer): pass
@@ -122,7 +122,7 @@ Here's our sequential blocks for our "model":
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```python
+```
 block1 = Sequential([Conv2d('conv', 5), Linear('lin', 3)], 'block1')
 block2 = Sequential([Conv2d('conv1', 8), Conv2d('conv2', 2), Linear('lin')], 'block2')
 ```
@@ -135,7 +135,7 @@ block2 = Sequential([Conv2d('conv1', 8), Conv2d('conv2', 2), Linear('lin')], 'bl
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```python
+```
 node_defaults['fillcolor'] = lambda o: 'greenyellow' if isinstance(o,Linear) else 'pink'
 cluster_defaults['label'] = node_defaults['label'] = attrgetter('name')
 node_defaults['tooltip'] = str
@@ -149,7 +149,7 @@ With that in place, we can directly create nodes from our objects, for instance 
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```python
+```
 c1 = seq_cluster(block1.layers, block1)
 c2 = seq_cluster(block2.layers, block2)
 e1,e2 = c1.connect(c2),c1.connect(c2.last())
@@ -162,7 +162,7 @@ graph_items(c1,c2,e1,e2)
 
 
 
-![svg](output_22_0.svg)
+![svg]\(docs/images/output_22_0.svg\)
 
 
 
@@ -178,7 +178,7 @@ In the above example, we defined our edges directly between `fastdot` objects. I
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```python
+```
 conns = (
     (block1, block2),
     (block1, block2.layers[-1]),
@@ -193,7 +193,7 @@ In this case, you'll want some way to connect your python objects to the `fastdo
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```python
+```
 g = graph_items(seq_cluster(block1.layers, block1), seq_cluster(block2.layers, block2))
 object2graph(block1.layers[-1])
 ```
@@ -216,7 +216,7 @@ You can use this to graph your connections without needing access to the graph i
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```python
+```
 g.add_items(*[object2graph(a).connect(object2graph(b))
               for a,b in conns])
 g
@@ -228,7 +228,7 @@ g
 
 
 
-![svg](output_30_0.svg)
+![svg]\(docs/images/output_30_0.svg\)
 
 
 
@@ -240,7 +240,7 @@ There's a helper function, `object_connections`, which creates these connections
 <div class="codecell" markdown="1">
 <div class="input_area" markdown="1">
 
-```python
+```
 g = graph_items(seq_cluster(block1.layers, block1), seq_cluster(block2.layers, block2))
 g.add_items(*object_connections(conns))
 g
@@ -252,7 +252,7 @@ g
 
 
 
-![svg](output_32_0.svg)
+![svg]\(docs/images/output_32_0.svg\)
 
 
 
