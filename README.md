@@ -4,14 +4,23 @@
 
 Acknowledgement: `fastdot` is heavily influenced by work from [David Page](https://github.com/davidcpage/), who built a system for drawing graphs based on a highly flexible data structure he designed. It may turn out that his library, when complete, will make it even easier to do the things described here (and his data structure also supports a lot more than just drawing)!
 
-## Pre-Install
-
-### Ubuntu
-`sudo apt-get install -y python-pydot python-pydot-ng graphviz`
-
 ## Install
 
-`pip install fastdot`
+You can install fastdot on your own machines with conda (highly recommended). If you're using Anaconda then run:
+
+```bash
+conda install -c fastai -c anaconda fastdot
+```
+...or if you're using miniconda) then run:
+```bash
+conda install -c fastai -c fastdot
+```
+
+Alternatively, if you want to use pip and you're on a debian based OS you can run:
+```bash
+sudo apt-get install -y python-pydot python-pydot-ng graphviz
+pip install fastdot
+```
 
 ## Synopsis
 
@@ -35,51 +44,10 @@ g
 ```
 
 
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-3-d433d522f933> in <module>
-    ----> 1 g = graph_items(seq_cluster(layers1, block1),
-          2                 seq_cluster(layers2, block2))
-          3 g.add_items(*object_connections(conns))
-          4 g
-          5 
 
 
-    ~/PycharmProjects/fastdot/fastdot/core.py in seq_cluster(items, cluster_label, **kwargs)
-        178 #Cell
-        179 def seq_cluster(items, cluster_label='', **kwargs):
-    --> 180     sg = Cluster(cluster_label)
-        181     its = sg.add_items(*items, **kwargs)
-        182     sg.add_edges_seq(its)
+![svg](docs/images/output_7_0.svg)
 
-
-    ~/PycharmProjects/fastdot/fastdot/core.py in Cluster(obj, **kwargs)
-         82     "Create a `pydot.Cluster` with a unique name"
-         83     kwargs = merge(cluster_defaults, kwargs)
-    ---> 84     return _pydot_create(pydot.Cluster, obj, **kwargs)
-         85 
-         86 #Cell
-
-
-    ~/PycharmProjects/fastdot/fastdot/core.py in _pydot_create(f, obj, **kwargs)
-         40 def _pydot_create(f, obj, **kwargs):
-         41     for k,v in kwargs.items():
-    ---> 42         if callable(v): v = kwargs[k] = v(obj)
-         43         if k not in ('name','graph_name'): kwargs[k] = quote(v)
-         44     return add_mapping(f(**kwargs), obj)
-
-
-    ~/PycharmProjects/fastdot/fastdot/core.py in uniq_name(o)
-         17 
-         18 #Cell
-    ---> 19 def uniq_name(o): return 'n'+(uuid4().hex)
-         20 
-         21 def quote(x, q='"'):
-
-
-    NameError: name 'uuid4' is not defined
 
 
 See the *symbolic graphs* and *object graphs* sections below for a more complete example.
@@ -99,6 +67,13 @@ g.add_item(Node('Check tooltip', tooltip="I have a tooltip!"))
 g.add_item(c)
 g
 ```
+
+
+
+
+![svg](docs/images/output_12_0.svg)
+
+
 
 As you see, graphs know how to show themselves in Jupyter notebooks directly and can be exported to HTML (it uses SVG behind the scenes). Tooltips appear in both notebooks and exported HTML pages. Nodes with the same label, by default, are set to the same color. Also, as shown above, you can just use `add_item` or `add_items`, regardless of the type of item.
 
@@ -140,6 +115,13 @@ e1,e2 = c1.connect(c2),c1.connect(c2.last())
 graph_items(c1,c2,e1,e2)
 ```
 
+
+
+
+![svg](docs/images/output_22_0.svg)
+
+
+
 Note that in this example we didn't even need to create the `Dot` object separately - `graph_items` creates it directly from the graph items provided.
 
 ## Using object graphs
@@ -160,6 +142,13 @@ g = graph_items(seq_cluster(block1.layers, block1), seq_cluster(block2.layers, b
 object2graph(block1.layers[-1])
 ```
 
+
+
+
+    <pydot.Node at 0x7efe787d2350>
+
+
+
 You can use this to graph your connections without needing access to the graph items:
 
 ```python
@@ -168,6 +157,13 @@ g.add_items(*[object2graph(a).connect(object2graph(b))
 g
 ```
 
+
+
+
+![svg](docs/images/output_30_0.svg)
+
+
+
 There's a helper function, `object_connections`, which creates these connections for you. So the above can be simplified to:
 
 ```python
@@ -175,3 +171,10 @@ g = graph_items(seq_cluster(block1.layers, block1), seq_cluster(block2.layers, b
 g.add_items(*object_connections(conns))
 g
 ```
+
+
+
+
+![svg](docs/images/output_32_0.svg)
+
+
