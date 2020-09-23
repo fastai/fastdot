@@ -7,6 +7,7 @@ __all__ = ['pydot', 'Dot', 'uniq_name', 'quote', 'graph_objects', 'object_names'
 #Cell
 from fastcore.all import *
 import pydot
+import matplotlib.pyplot as plt
 from matplotlib.colors import rgb2hex, hex2color
 
 #Cell
