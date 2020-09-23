@@ -2,10 +2,13 @@
 
 title: fastdot
 
+
 keywords: fastai
 sidebar: home_sidebar
 
 summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising, and pythonic"
+description: "A simple wrapper over `pydot` to make it more consistent, unsurprising, and pythonic"
+nb_path: "index.ipynb"
 ---
 <!--
 
@@ -18,33 +21,37 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 -->
 
 <div class="container" id="notebook-container">
+        
+    {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
 
 </div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Acknowledgement: <code>fastdot</code> is heavily influenced by work from <a href="https://github.com/davidcpage/">David Page</a>, who built a system for drawing graphs based on a highly flexible data structure he designed. It may turn out that his library, when complete, will make it even easier to do the things described here (and his data structure also supports a lot more than just drawing)!</p>
+<p>Acknowledgement: <code>fastdot</code> is heavily influenced by work from <a href="https://github.com/davidcpage/">David Page</a>, who built a system for drawing graphs based on a highly flexible data structure he designed.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Install">Install<a class="anchor-link" href="#Install">&#182;</a></h2>
+<h2 id="Install">Install<a class="anchor-link" href="#Install"> </a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>pip install fastdot</code></p>
+<p>We suggest installing with conda: <code>conda install -c fastai fastdot</code>. You can alternatively install with pip: <code>pip install fastdot</code>; however, if you use this approach, you'll also need to install graphviz (e.g. using <code>apt</code>, <code>brew</code>, etc).</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Synopsis">Synopsis<a class="anchor-link" href="#Synopsis">&#182;</a></h2>
+<h2 id="Synopsis">Synopsis<a class="anchor-link" href="#Synopsis"> </a></h2>
 </div>
 </div>
 </div>
@@ -55,6 +62,8 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 </div>
 </div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -72,6 +81,8 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 
 </div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Then map them directly to a visual respresentation:</p>
@@ -79,6 +90,8 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 </div>
 </div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -214,6 +227,8 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 
 </div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>See the <em>symbolic graphs</em> and <em>object graphs</em> sections below for a more complete example.</p>
@@ -223,7 +238,7 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="fastdot-overview">fastdot overview<a class="anchor-link" href="#fastdot-overview">&#182;</a></h2>
+<h2 id="fastdot-overview">fastdot overview<a class="anchor-link" href="#fastdot-overview"> </a></h2>
 </div>
 </div>
 </div>
@@ -241,6 +256,8 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 </div>
 </div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -344,6 +361,8 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 
 </div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As you see, graphs know how to show themselves in Jupyter notebooks directly and can be exported to HTML (it uses SVG behind the scenes). Tooltips appear in both notebooks and exported HTML pages. Nodes with the same label, by default, are set to the same color. Also, as shown above, you can just use <code>add_item</code> or <code>add_items</code>, regardless of the type of item.</p>
@@ -353,7 +372,7 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Symbolic-graphs">Symbolic graphs<a class="anchor-link" href="#Symbolic-graphs">&#182;</a></h2>
+<h2 id="Symbolic-graphs">Symbolic graphs<a class="anchor-link" href="#Symbolic-graphs"> </a></h2>
 </div>
 </div>
 </div>
@@ -364,6 +383,8 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 </div>
 </div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -383,6 +404,8 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 
 </div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Here's our sequential blocks for our "model":</p>
@@ -390,6 +413,8 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 </div>
 </div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -404,13 +429,17 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 
 </div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>fastdot</code> can create all node properties directly from objects; you just have to define functions describing how to map the object's attributes to graph properties. These mappings go in the <a href="/fastdot/core#node_defaults"><code>node_defaults</code></a> and <a href="/fastdot/core#cluster_defaults"><code>cluster_defaults</code></a> dictionaries (although by default labels are set using <code>str()</code>, so we don't need any special cluster defaults in this case):</p>
+<p><code>fastdot</code> can create all node properties directly from objects; you just have to define functions describing how to map the object's attributes to graph properties. These mappings go in the <a href="/fastdot/core.html#node_defaults"><code>node_defaults</code></a> and <a href="/fastdot/core.html#cluster_defaults"><code>cluster_defaults</code></a> dictionaries (although by default labels are set using <code>str()</code>, so we don't need any special cluster defaults in this case):</p>
 
 </div>
 </div>
 </div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -426,13 +455,17 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 
 </div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>With that in place, we can directly create nodes from our objects, for instance using the convenient <a href="/fastdot/core#seq_cluster"><code>seq_cluster</code></a> function:</p>
+<p>With that in place, we can directly create nodes from our objects, for instance using the convenient <a href="/fastdot/core.html#seq_cluster"><code>seq_cluster</code></a> function:</p>
 
 </div>
 </div>
 </div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -568,16 +601,18 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 
 </div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that in this example we didn't even need to create the <a href="/fastdot/core#Dot"><code>Dot</code></a> object separately - <a href="/fastdot/core#graph_items"><code>graph_items</code></a> creates it directly from the graph items provided.</p>
+<p>Note that in this example we didn't even need to create the <a href="/fastdot/core.html#Dot"><code>Dot</code></a> object separately - <a href="/fastdot/core.html#graph_items"><code>graph_items</code></a> creates it directly from the graph items provided.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Using-object-graphs">Using object graphs<a class="anchor-link" href="#Using-object-graphs">&#182;</a></h2>
+<h2 id="Using-object-graphs">Using object graphs<a class="anchor-link" href="#Using-object-graphs"> </a></h2>
 </div>
 </div>
 </div>
@@ -588,6 +623,8 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 </div>
 </div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -604,13 +641,17 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 
 </div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In this case, you'll want some way to connect your python objects to the <code>fastdot</code> graph items that represent them. A mapping is stored automatically by <code>fastdot</code>, and is made available through the <a href="/fastdot/core#object2graph"><code>object2graph</code></a> function:</p>
+<p>In this case, you'll want some way to connect your python objects to the <code>fastdot</code> graph items that represent them. A mapping is stored automatically by <code>fastdot</code>, and is made available through the <a href="/fastdot/core.html#object2graph"><code>object2graph</code></a> function:</p>
 
 </div>
 </div>
 </div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -641,6 +682,8 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 
 </div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>You can use this to graph your connections without needing access to the graph items:</p>
@@ -648,6 +691,8 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 </div>
 </div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -782,13 +827,17 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 
 </div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There's a helper function, <a href="/fastdot/core#object_connections"><code>object_connections</code></a>, which creates these connections for you. So the above can be simplified to:</p>
+<p>There's a helper function, <a href="/fastdot/core.html#object_connections"><code>object_connections</code></a>, which creates these connections for you. So the above can be simplified to:</p>
 
 </div>
 </div>
 </div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -923,6 +972,8 @@ summary: "A simple wrapper over `pydot` to make it more consistent, unsurprising
 </div>
 
 </div>
+    {% endraw %}
+
 </div>
  
 

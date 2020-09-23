@@ -11,7 +11,7 @@ entries:
       url: /
     - output: web,pdf
       title: fastdot.core
-      url: /core
+      url: core.html
     output: web
     title: fastdot
   output: web
