@@ -2,7 +2,7 @@
 
 __all__ = ['pydot', 'Dot', 'uniq_name', 'quote', 'graph_objects', 'object_names', 'add_mapping', 'node_defaults',
            'Node', 'object2graph', 'obj2node_color', 'graph_colors1', 'graph_colors2', 'cluster_defaults', 'Cluster',
-           'graph_items', 'object_connections', 'graph_edges_seq', 'seq_cluster', 'Point']
+           'graph_items', 'object_connections', 'graph_edges_seq', 'seq_cluster', 'Point', 'is_listy']
 
 # Cell
 from fastcore.all import *
@@ -190,3 +190,22 @@ def seq_cluster(items, cluster_label='', **kwargs):
 def Point(label='pnt', **kwargs):
     "Create a `Node` with a 'point' shape"
     return (Node('pnt', shape='point'))
+
+# Cell
+@patch
+def __add__(self:pydot.Graph, item, **kwargs):
+    "Add a `Cluster`, `Node`, or `Edge` to the `Graph` with operator"
+    # if not is_listy(item):
+    #     item = L(item)
+    if not is_listy(item):
+        return self.add_item(item, **kwargs)
+    else:
+        return self.add_items( *item, **kwargs)
+
+@patch
+def __rshift__(self:(pydot.Node,pydot.Graph), item, compass1=None, compass2=None, **kwargs):
+    return self.connect(item, compass1, compass2, **kwargs)
+
+
+def is_listy(x)->bool:
+    return isinstance(x, (tuple,list))

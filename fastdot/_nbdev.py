@@ -31,7 +31,11 @@ index = {"Dot": "00_core.ipynb",
          "graph_edges_seq": "00_core.ipynb",
          "pydot.Graph.add_edges_seq": "00_core.ipynb",
          "seq_cluster": "00_core.ipynb",
-         "Point": "00_core.ipynb"}
+         "Point": "00_core.ipynb",
+         "pydot.Graph.__add__": "00_core.ipynb",
+         "pydot.Node.__rshift__": "00_core.ipynb",
+         "pydot.Graph.__rshift__": "00_core.ipynb",
+         "is_listy": "00_core.ipynb"}
 
 modules = ["core.py"]
 
