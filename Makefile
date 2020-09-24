@@ -1,3 +1,7 @@
+.ONESHELL:
+SHELL := /bin/bash
+SHELLFLAGS := -e
+
 SRC := $(wildcard nbs/*.ipynb)
 DIST := python setup.py sdist bdist_wheel
 
@@ -17,18 +21,20 @@ docs: $(SRC)
 test:
 	nbdev_test_nbs
 
-release: bump clean
-	$(DIST)
-	twine upload --repository pypi dist/*
+release: pypi
+	sleep 5
+	fastrelease_conda_package --upload_user fastai --build_args '-c pytorch -c fastai'
+	nbdev_bump_version
+
+conda_release:
+	fastrelease_conda_package --upload_user fastai --build_args '-c pytorch -c fastai'
 
 pypi: dist
 	twine upload --repository pypi dist/*
 
-bump:
-	nbdev_bump_version
-
 dist: clean
-	$(DIST)
+	python setup.py sdist bdist_wheel
 
 clean:
 	rm -rf dist
+

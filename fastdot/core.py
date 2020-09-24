@@ -6,8 +6,13 @@ __all__ = ['pydot', 'Dot', 'uniq_name', 'quote', 'graph_objects', 'object_names'
 
 # Cell
 from fastcore.all import *
-import pydot
+import pydot, matplotlib.pyplot as plt
 from matplotlib.colors import rgb2hex, hex2color
+from uuid import uuid4
+from typing import Collection
+
+# Cell
+#nbdev_comment _all_ = ['pydot']
 
 # Cell
 def Dot(defaults=None, rankdir='LR', directed=True, compound=True, **kwargs):
